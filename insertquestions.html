@@ -9,8 +9,27 @@
 <!-- Method can be set as POST for hiding values in URL-->
 
 <h2>INSERT QUESTION</h2>
-<label>CATEGORY</label>
-<input class="input" name="category" type="text" value="">
+<script type="text/javascript">
+function onSelectChange(){
+    var sel = document.getElementById('select');
+    var strUser = sel.options[sel.selectedIndex].text;  //getting the selected option's text
+
+    if(strUser == 'OTHERS'){
+         document.getElementById('yourTextBox').disabled = false;
+				  //enabling the text box because user selected 'Other' option.
+
+    }
+}
+</script>
+<select VALUE="category" onchange="onSelectChange()" id="select" name="category">
+	<option selected disabled>SELECT CATEGORY</option>
+  <option value="php">PHP</option>
+  <option value="sports">SPORTS</option>
+  <option value="history">HISTORY</option>
+  <option value="music">MUSIC</option>
+	<option value="Science and Nature ">SCIENCE & NATURE</option>
+	<option value="OTHERS">OTHERS</option>
+</select><br><input type="text" id="yourTextBox" name="yourTextBox" disabled="disabled"/><br>
 <label>QUESTION</label>
 <input class="input" name="question" type="text" value="">
 <label>OPTION1</label>

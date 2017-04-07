@@ -3,8 +3,20 @@ $conn= mysql_connect("localhost", "root", "9433"); // Establishing Connection wi
 $db = mysql_select_db("quizdb", $conn);
 // Selecting Database from Server
 if(isset($_POST['submit'])){ // Fetching variables of the form which travels in URL
-	$cat=$_POST['category'];
-	$catquery= mysql_query("insert into categories(c_name)values('".$cat."')");
+$cate=$_POST['category'];
+$others="OTHERS";
+	if(strcasecmp($others,$cate)==0)
+     {
+			 echo "others";
+	     $cat=$_POST['yourTextBox'];
+     }
+	else
+	   {
+			 echo "not others";
+		   $cat=$_POST['category'];
+	   }
+
+  $catquery= mysql_query("insert into categories(c_name) values('".$cat."')");
 $sql=mysql_query("select c_id from categories where c_name='".$cat."'");
 // $rs=mysql_query($conn,$sql);
 // $row=mysql_fetch_assoc($rs);
@@ -17,8 +29,6 @@ $sql=mysql_query("select c_id from categories where c_name='".$cat."'");
 
 $result = mysql_fetch_assoc($sql);
 $result_cid=$result['c_id'];
-
-
 $question = $_POST['question'];
 $opt1 = $_POST['option1'];
 $opt2=$_POST['option2'];
