@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link href="css/askregister.css" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="WOW-master/css/libs/animate.css">
+</head>
+<body>
+      <script type="text/javascript" src="WOW-master/dist/wow.min.js"></script>
+
+      <script type="text/javascript">
+
+	wow = new WOW(
+	{
+	boxClass:'wow',
+	animateClass:'animated',
+	offset:100
+	}
+	);
+	wow.init();
+	</script>
+      <div class="container ">
+      <div class="align-center ">
+      <div class="buttons wow bounceInLeft	">
+     
+      <input type="button" onclick="redirect_registered()"  id="btn1" value="If you are a registered user click here">
+
+
+
+
+      <input type="button" onclick="redirect_userlogin()"  id="btn2" value="Register here">
+      </div>
+      
+      </div>
+      </div>
+      <script>
+
+ function redirect_registered()
+{
+   
+   window.location=" http://quiz.com/registereduserlogin.html";
+   
+
+   
+}
+</script>
+<script>
+ function redirect_userlogin()
+{
+
+   
+      window.location="http://quiz.com/userlogin.html";
+
+}
+</script>
+</body>
+</html>

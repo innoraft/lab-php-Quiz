@@ -3,10 +3,12 @@
 <head>
 <title>REGISTER</title>
 <link href="css/userloginform.css" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/bootstrap.min.css">
 
 
 </head>
 <body>
+<div class="container">
 <div class="maindiv">
 <!--HTML Form -->
 <div class="form_div">
@@ -21,7 +23,7 @@
 <label>Email:</label>
 <input class="input" name="email" type="text"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" value="">
 <label>Password:</label>
-<input type="text" id="txtPassword" name="password" onkeyup="CheckPasswordStrength(this.value)" />
+<input type="password" id="txtPassword" name="password" onkeyup="CheckPasswordStrength(this.value)" autocomplete="off" />
 <span id="password_strength"></span>
 <script type="text/javascript">
     function CheckPasswordStrength(password) {
@@ -84,7 +86,11 @@
 <!-- <input class="input" name="password" type="text" value=""> -->
 
 
-<input class="submit" name="submit" type="submit" value="submit">
+<input class="submit" name="submit" type="submit" value="SUBMIT">
+
 
 
 </form>
+</div>
+</body>
+</html>

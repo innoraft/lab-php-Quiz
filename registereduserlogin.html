@@ -3,17 +3,33 @@
 <head>
 <title>LOGIN</title>
 <link href="css/userloginform.css" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="WOW-master/css/libs/animate.css">
 
 
 </head>
 <body>
-<div class="maindiv">
+<script type="text/javascript" src="WOW-master/dist/wow.min.js"></script>
+
+      <script type="text/javascript">
+
+    wow = new WOW(
+    {
+    boxClass:'wow',
+    animateClass:'animated',
+    offset:100
+    }
+    );
+    wow.init();
+    </script>
+<div class="container">
+<div class="maindiv wow fadeInLeft">
 <!--HTML Form -->
 <div class="form_div">
 <div class="title">
 
 </div>
-<form name="myForm" action="checklogin.php" onsubmit="return validateForm()"  method="post">
+<form name="myForm" action="checklogin.php"   method="post">
 <!-- Method can be set as POST for hiding values in URL-->
 <h2>LOG IN TO YOUR ACCOUNT</h2>
 <label>Name:</label>
@@ -21,10 +37,10 @@
 <label>Email:</label>
 <input class="input" name="email" type="text"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" value="">
 <label>Password:</label>
-<input type="text" id="txtPassword" name="password" onkeyup="CheckPasswordStrength(this.value)" />
+<input type="password" id="txtPassword" name="password" onkeyup="CheckPasswordStrength(this.value)" autocomplete="off" />
 <span id="password_strength"></span>
 <script type="text/javascript">
-    function CheckPasswordStrength(password) {
+    function CheckPasswordStrength(password){
         var password_strength = document.getElementById("password_strength");
 
         //TextBox left blank.
@@ -88,3 +104,8 @@
 
 
 </form>
+</div>
+</div>
+</div>
+</body>
+</html>
