@@ -1,6 +1,5 @@
 <?php
-$connection = mysql_connect("localhost", "root", "9433"); // Establishing Connection with Server
-$db = mysql_select_db("quizdb", $connection); // Selecting Database from Server
+include('dbconfig.php');
 if(isset($_POST['submit'])){ // Fetching variables of the form which travels in URL
 $name = $_POST['name'];
 $email = $_POST['email'];

@@ -1,6 +1,5 @@
 <?php
-$conn= mysql_connect("localhost", "root", "9433"); // Establishing Connection with Server
-$db = mysql_select_db("quizdb", $conn);
+include('dbconfig.php');
 // Selecting Database from Server
 if(isset($_POST['submit'])){ // Fetching variables of the form which travels in URL
 $cate=$_POST['category'];
