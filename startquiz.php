@@ -68,14 +68,16 @@ while($row = mysql_fetch_assoc($queryques))
    shuffle($arrayques);
    $_SESSION["arrayques"]=$arrayques;
    $date=time();
-   $dt=date('m/d/Y',$date);
+
+  
+   //$dt=date('m/d/Y',$date);
    $name= $_SESSION['u_name'];
    $c_id=$_SESSION['category_id'];
    $querycat=mysql_query("select c_name from categories where c_id='$c_id'");
    $cat_name=mysql_fetch_assoc($querycat);
    
 
-   $query=mysql_query(" insert into exam_taken(u_id,c_id,date,u_name,c_name) values('".$u_id."','".$fetch_id."','".$dt."','".$name."','".$cat_name['c_name']."')"); 
+   $query=mysql_query(" insert into exam_taken(u_id,c_id,date,u_name,c_name) values('".$u_id."','".$fetch_id."','".$date."','".$name."','".$cat_name['c_name']."')"); 
    
    $sql=mysql_query("select e_id from exam_taken where u_id='$u_id' and c_id='$fetch_id'"); 
    $e_id=mysql_fetch_assoc($sql);
