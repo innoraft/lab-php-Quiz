@@ -235,7 +235,7 @@ function updateCounter() {
   else {
       // msg = "Counting finished.";
       resetCounter();
-       window.location="http://quiz.com/score.php";
+       window.location="score.php";
 
       stopCounter();
   }
