@@ -61,7 +61,7 @@ echo "<p>Insertion Failed <br/> Some Fields are Blank....!!</p>";
 
 
 // path where your CSV file is located
-define('CSV_PATH','/var/www/html/');
+define('CSV_PATH','/var/www/quiz.com/public_html/');
 
 // Name of your CSV file
 $csv_file = CSV_PATH . "quesans.csv"; 

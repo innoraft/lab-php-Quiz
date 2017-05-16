@@ -28,7 +28,7 @@
          
         <div class="container">
         <div class="session-section">
-        <?php echo "user_id".$_SESSION['userid'];?>
+        <?php echo "user_id".$_SESSION['userid'];?> -->
 
       <?php } 
 
@@ -75,34 +75,42 @@
          ?>
         
          <div class="container">
+         <div class="panel panel-default" id="quespanel">
          <div class="question">
          <h1><?php  echo"$question";?></h1>
          </div>
          </div>
+         </div>
          
-         
-         
-         
-         
-         
-					
-          
-          <div class="align-center">
           <div class="container">
+          <div class="align-center ">
           
-          <div class="displayques" id="displayquestion">
+          <div class="panel panel-default" id="optionpanel">
+          
+            <div class="displayques" id="displayquestion">
             
             <form action="submitanswer.php" method="post">
-            <input type="radio" name="corrans" value="1"><?php echo $option1 ?> <br>
-		        <input type="radio" name="corrans" value="2"> <?php echo $option2 ?> <br><br>
-		        <input type="radio" name="corrans" value="3"><?php echo $option3 ?> <br><br>
-		        <input type="radio" name="corrans" value="4"><?php echo $option4 ?> <br>
+            <p><input type="radio"  name="corrans" value="1"><?php echo $option1 ?></p> 
+		        <P><input type="radio" name="corrans" value="2"> <?php echo $option2 ?></P>
+		        <p><input type="radio"  name="corrans" value="3"><?php echo $option3 ?></p>       
+            <p><input type="radio"  name="corrans" value="4"><?php echo $option4 ?></p>
+             
+            </div>
+            </div>
+            </div>
+            </div>
 
+           
+
+            <div class="container">
+            
+            <div class="submitbtn">
              <?php if($_GET['q']== 0) 
               { ?>
                       
                       <input type="submit" onclick="" value="submit_ans">
                       <input type="button" onclick="redirect_next()" value="next">  
+                      <input type="button" onclick="redirect_score()" value="END TEST" >
 
                 <?php } 
                 
@@ -118,16 +126,28 @@
                       <input type="button" onclick="redirect_prev()" id="prevbtn"  value="prev ">
                       <input type="submit" onclick="" value="submit_ans">
                       <input type="button" onclick="redirect_next()" value="next">
+                      <input type="button" onclick="redirect_score()" value="END TEST" >
+                </div>
+                
+                
+               
+                      
                  <?php  } 
+
       }
       else{
 
             header("Location:score.php");
       }?>
-                     </form>
-                     </div>
-                     </div>
-                     </div>
+      
+    
+</form>
+                     
+
+
+                
+
+                     
                      
 
 
@@ -159,7 +179,7 @@
 }
 </script>
 <script type="text/javascript">
-var MAX_COUNTER = 50;
+var MAX_COUNTER = 1000;
 var counter = null;
 var counter_interval = null;
 
@@ -245,6 +265,6 @@ init();
   <div id="counter"></div>
 <!-- <a href="#" onclick="resetCounter(); return false">Reset counter</a></h1> -->
    </div>
-
+   </div>
 </body>
 </html>

@@ -24,9 +24,14 @@ session_start();
     ?>
     <?php  if(isset($_SESSION['userid']))
     {
-    echo "user_id".$_SESSION['userid'];
-    }
-  ?>
+    ?>
+    <div class="container">
+    <div class="idprint">
+    <div class="panel panel-default">
+    <?php echo "user_id".$_SESSION['userid'];?></div>
+    <?php 
+     }
+    ?>
 <?php
 $cat=$_POST['c_name'];
 
@@ -47,8 +52,10 @@ if($row['c_id']==$fetch_id)
 
 }
 else{
-
-
+?>
+</div>
+</div>
+<?php 
 
 $queryques=mysql_query("select * from quesans where c_id='".$fetch_id."'");
 $arrayques=array();
@@ -61,12 +68,14 @@ while($row = mysql_fetch_assoc($queryques))
    shuffle($arrayques);
    $_SESSION["arrayques"]=$arrayques;
    $date=time();
-   echo $date;
-   
+   $dt=date('m/d/Y',$date);
    $name= $_SESSION['u_name'];
+   $c_id=$_SESSION['category_id'];
+   $querycat=mysql_query("select c_name from categories where c_id='$c_id'");
+   $cat_name=mysql_fetch_assoc($querycat);
    
 
-   $query=mysql_query(" insert into exam_taken(u_id,c_id,date,u_name) values('".$u_id."','".$fetch_id."','".$dates."','".$name."')"); 
+   $query=mysql_query(" insert into exam_taken(u_id,c_id,date,u_name,c_name) values('".$u_id."','".$fetch_id."','".$dt."','".$name."','".$cat_name['c_name']."')"); 
    
    $sql=mysql_query("select e_id from exam_taken where u_id='$u_id' and c_id='$fetch_id'"); 
    $e_id=mysql_fetch_assoc($sql);

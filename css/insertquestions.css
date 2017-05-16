@@ -4,7 +4,7 @@ body {
   font-size: 12px;
   line-height: 30px;
   
-   background: url(../images/testbg.jpeg) no-repeat top;
+   background: url(../images/test.jpg) no-repeat top;
   background-size: cover;
   -moz-background-size: cover;
   -webkit-background-size: cover;
@@ -16,15 +16,7 @@ body {
 }
 @import "http://fonts.googleapis.com/css?family=Droid+Serif";
 /* The Above Line Is To Import Google Font Style */
-.maindiv {
-margin:30px auto;
-width:980px;
-height:500px;
-background:#fff;
-padding-top:20px;
-font-family:'Droid Serif',serif;
-font-size:14px
-}
+
 .title {
 width:500px;
 height:70px;
@@ -41,7 +33,9 @@ width:300px;
 border:1px dashed #aaa;
 padding:10px 30px 40px;
 margin-left:70px;
-background-color:#f0f8ff
+background-color: white;
+margin:0 auto;
+
 }
 form h2 {
 text-align:center;

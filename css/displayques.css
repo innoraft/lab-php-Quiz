@@ -4,7 +4,7 @@ body {
   font-size: 12px;
   line-height: 30px;
   
-   background: url(../images/ques.jpg) no-repeat top;
+   background: url(../images/wood2.jpg) no-repeat top;
   background-size: cover;
   -moz-background-size: cover;
   -webkit-background-size: cover;
@@ -14,20 +14,49 @@ body {
   overflow: hidden; 
   
 }
+input[type="radio"]{
+  width:20px;
+  height: 20px;
+}
+
 #displayquestion{
-          font-size: 25px;
-          color: blue;
+          font-size: 30px;
+          color: black;
+          
+          
 
 }
 .question h1{
 	font-size:30px;
-  padding-left:32%;
+  
   padding-bottom: 2%;
-  color: blue;
-  padding-top: 10%;
+  color: black;
+  padding-top: 2%;
+  text-align: center;
 
 }
+.submitbtn
+{
+  color: black;
+  margin-top: 20%;
+  text-align: center;
+  align-content: center;
+  font-size: 20px;
+  font-style: fantasy;
+
+}
+input[type="submit"],input[type="button"]{
+   background-image: url("../images/cream.jpg");
+}
 .align-center{
+  
+  margin: 0 auto;
+  top:50%;
+  left:50%;
+  transform : translate(-50%,-50%);
+  position: absolute;
+}
+.ques{
   text-align: center;
   margin: 0 auto;
   top:50%;
@@ -36,10 +65,20 @@ body {
   position: absolute;
 }
 .session-section{
-	font-style: georgia;
+	font-style: fantasy;
   font-size: 30px;
+  color: white;
 
+}
+#quespanel{
+   background-image: url("../images/cream.jpg");
+   
+
+}
+#optionpanel{
+  background-image: url("../images/cream.jpg");
 }
 .timer{
   font-size: 30px;
+  color: white;
 }

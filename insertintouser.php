@@ -30,6 +30,8 @@ if($name !=''||$email !=''){
 //Insert Query of SQL
 $query = mysql_query("insert into user(u_name, u_email,u_passhash,roll_id)  values ('$name','$email','$passhash','$roll')");
 echo "<br/><br/><span>Data Inserted successfully...!!</span>";
+header("location:http://quiz.com/registereduserlogin.html");
+
 
 }
 else{

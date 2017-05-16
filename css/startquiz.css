@@ -1,10 +1,7 @@
 body {
-  font-family: "Roboto", Helvetica, Arial, sans-serif;
-  font-weight: 100;
-  font-size: 12px;
-  line-height: 30px;
   
-   background: url(../images/testbg.jpeg) no-repeat top;
+  
+   background: url(../images/wood2.jpg) no-repeat top;
   background-size: cover;
   -moz-background-size: cover;
   -webkit-background-size: cover;
@@ -12,7 +9,6 @@ body {
   min-height:700px;
   width: 100%;
   overflow: hidden; 
-  
 }
 #btn{
 	width: 400px;
@@ -33,4 +29,8 @@ body {
   left:50%;
   transform : translate(-50%,-50%);
   position: absolute;
+}
+.idprint{
+  font-size: 30px;
+  color: white;
 }

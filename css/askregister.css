@@ -4,7 +4,7 @@ body {
   font-size: 12px;
   line-height: 30px;
   
-   background: url(../images/slide1.png) no-repeat top;
+   background: url(../images/wood2.jpg) no-repeat top;
   background-size: cover;
   -moz-background-size: cover;
   -webkit-background-size: cover;
@@ -17,11 +17,11 @@ body {
 #btn1{
   width: 400px;
   height: 100px;
-  background-color: lightgrey;
+  background-color: white;
   font-size: 20px;
   color: black;
   cursor: pointer;
-  font-family: georgia;
+  font-family: fantasy;
   box-shadow: 5px;
   cursor: pointer;
   margin-bottom: 20%;
@@ -29,11 +29,11 @@ body {
 #btn2{
   width: 400px;
   height: 100px;
-  background-color: lightgrey;
+  background-color: white;
   font-size: 20px;
   color: black;
   cursor: pointer;
-  font-family: georgia;
+  font-family: fantasy;
   box-shadow: 5px;
   cursor: pointer;
 }
