@@ -1,0 +1,36 @@
+body {
+  
+  
+   background: url(../images/wood2.jpg) no-repeat top;
+  background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  min-height:700px;
+  width: 100%;
+  overflow: hidden; 
+}
+#btn{
+	width: 400px;
+  height: 100px;
+  background-color: lightgrey;
+  font-size: 40px;
+  color: black;
+  cursor: pointer;
+  font-family: georgia;
+  box-shadow: 10px;
+  cursor: pointer;
+
+}
+.align-center{
+  text-align: center;
+  margin: 0 auto;
+  top:50%;
+  left:50%;
+  transform : translate(-50%,-50%);
+  position: absolute;
+}
+.idprint{
+  font-size: 30px;
+  color: white;
+}

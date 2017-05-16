@@ -1,32 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>REGISTER</title>
+<title>LOGIN</title>
 <link href="css/userloginform.css" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="WOW-master/css/libs/animate.css">
 
 
 </head>
 <body>
-<div class="container">
-<div class="maindiv">
-<!--HTML Form -->
-<div class="form_div">
-<div class="title">
+<script type="text/javascript" src="WOW-master/dist/wow.min.js"></script>
 
-</div>
-<form name="myForm" action="insertintouser.php" onsubmit="return validateForm()"  method="post">
+      <script type="text/javascript">
+
+    wow = new WOW(
+    {
+    boxClass:'wow',
+    animateClass:'animated',
+    offset:100
+    }
+    );
+    wow.init();
+    </script>
+<div class="container">
+
+
+<!--HTML Form -->
+<div class="form_div wow fadeInLeft">
+
+
+<form name="myForm" action="checklogin.php"  onsubmit="return validateForm()" method="post">
 <!-- Method can be set as POST for hiding values in URL-->
-<h2>REGISTER</h2>
+<h2>LOG IN TO YOUR ACCOUNT</h2>
 <label>Name:</label>
 <input class="input" name="name" type="text" value="">
 <label>Email:</label>
 <input class="input" name="email" type="text"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" value="">
 <label>Password:</label>
-<input type="password" id="txtPassword" name="password" onkeyup="CheckPasswordStrength(this.value)" autocomplete="off" />
+<input type="password" id="txtPassword" name="password" onkeyup="CheckPasswordStrength(this.value)" autocomplete="off" >
 <span id="password_strength"></span>
+<input  class="input" name="submit" type="submit" value="SUBMIT">
 <script type="text/javascript">
-    function CheckPasswordStrength(password) {
+    function CheckPasswordStrength(password){
         var password_strength = document.getElementById("password_strength");
 
         //TextBox left blank.
@@ -86,11 +101,13 @@
 <!-- <input class="input" name="password" type="text" value=""> -->
 
 
-<input class="submit" name="submit" type="submit" value="SUBMIT">
 
 
 
 </form>
+
+
+</div>
 </div>
 </body>
 </html>

@@ -1,32 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>REGISTER</title>
+<title>LOGIN</title>
 <link href="css/userloginform.css" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/bootstrap.min.css">
 
 
 </head>
 <body>
-<div class="container">
 <div class="maindiv">
 <!--HTML Form -->
 <div class="form_div">
 <div class="title">
 
 </div>
-<form name="myForm" action="insertintouser.php" onsubmit="return validateForm()"  method="post">
+<form name="myForm" action="checkadminlogin.php"   method="post">
 <!-- Method can be set as POST for hiding values in URL-->
-<h2>REGISTER</h2>
+<h2>LOG IN TO YOUR ACCOUNT</h2>
 <label>Name:</label>
 <input class="input" name="name" type="text" value="">
 <label>Email:</label>
 <input class="input" name="email" type="text"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" value="">
 <label>Password:</label>
-<input type="password" id="txtPassword" name="password" onkeyup="CheckPasswordStrength(this.value)" autocomplete="off" />
+<input type="text" id="txtPassword" name="password" onkeyup="CheckPasswordStrength(this.value)" autocomplete="off" />
 <span id="password_strength"></span>
 <script type="text/javascript">
-    function CheckPasswordStrength(password) {
+    function CheckPasswordStrength(password){
         var password_strength = document.getElementById("password_strength");
 
         //TextBox left blank.
@@ -86,11 +84,9 @@
 <!-- <input class="input" name="password" type="text" value=""> -->
 
 
-<input class="submit" name="submit" type="submit" value="SUBMIT">
-
+<input class="submit" name="submit" type="submit" value="submit">
 
 
 </form>
-</div>
 </body>
 </html>

@@ -1,30 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>REGISTER</title>
-<link href="css/userloginform.css" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-
-
+    <title>USER LOGIN</title>
+  
+<link href="css/testuserlogin.css" rel="stylesheet">
 </head>
 <body>
-<div class="container">
-<div class="maindiv">
-<!--HTML Form -->
-<div class="form_div">
-<div class="title">
-
+<div class="container">  
+  <form id="contact" action="insertintouser.php" onsubmit="return validateForm()" method="post">
+    <h3>USER LOGIN</h3>
+    
+    <fieldset>
+      <input placeholder="Your name" name="name" type="text" tabindex="1" required autofocus>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Your Email Address" name="email" type="text" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" tabindex="2" required>
+    </fieldset>
+    <fieldset>
+     <input type="text" id="txtPassword" name="password" placeholder="your password" onkeyup="CheckPasswordStrength(this.value)" />
+     <span id="password_strength"></span>
+    </fieldset>
+    <input class="submit" name="submit" type="submit" value="submit">
+    
+  </form>
 </div>
-<form name="myForm" action="insertintouser.php" onsubmit="return validateForm()"  method="post">
-<!-- Method can be set as POST for hiding values in URL-->
-<h2>REGISTER</h2>
-<label>Name:</label>
-<input class="input" name="name" type="text" value="">
-<label>Email:</label>
-<input class="input" name="email" type="text"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" value="">
-<label>Password:</label>
-<input type="password" id="txtPassword" name="password" onkeyup="CheckPasswordStrength(this.value)" autocomplete="off" />
-<span id="password_strength"></span>
 <script type="text/javascript">
     function CheckPasswordStrength(password) {
         var password_strength = document.getElementById("password_strength");
@@ -83,14 +82,6 @@
         password_strength.style.color = color;
     }
 </script>
-<!-- <input class="input" name="password" type="text" value=""> -->
 
-
-<input class="submit" name="submit" type="submit" value="SUBMIT">
-
-
-
-</form>
-</div>
 </body>
 </html>
