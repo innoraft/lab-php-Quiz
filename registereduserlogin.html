@@ -26,20 +26,20 @@
 
 
 <!--HTML Form -->
-<div class="form_div wow fadeInLeft">
 
 
+<div class="formpart">
 <form name="myForm" action="checklogin.php"  onsubmit="return validateForm()" method="post">
 <!-- Method can be set as POST for hiding values in URL-->
-<h2>LOG IN TO YOUR ACCOUNT</h2>
-<label>Name:</label>
-<input class="input" name="name" type="text" value="">
-<label>Email:</label>
-<input class="input" name="email" type="text"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" value="">
-<label>Password:</label>
-<input type="password" id="txtPassword" name="password" onkeyup="CheckPasswordStrength(this.value)" autocomplete="off" >
+<h2>LOGIN</h2>
+
+<input class="form-control input-sm chat-input" name="name" type="text" value="" placeholder="Name">
+
+<input class="form-control input-sm chat-input" name="email" type="text"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" value="" placeholder="Email">
+
+<input type="password"  class="form-control input-sm chat-input" name="password" onkeyup="CheckPasswordStrength(this.value)" autocomplete="off" placeholder="Password" >
 <span id="password_strength"></span>
-<input  class="input" name="submit" type="submit" value="SUBMIT">
+<input  class="btn btn-warning" name="submit" type="submit" value="SUBMIT">
 <script type="text/javascript">
     function CheckPasswordStrength(password){
         var password_strength = document.getElementById("password_strength");
@@ -106,8 +106,8 @@
 
 </form>
 
-
 </div>
+
 </div>
 </body>
 </html>

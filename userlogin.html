@@ -9,22 +9,23 @@
 </head>
 <body>
 <div class="container">
-<div class="maindiv">
-<!--HTML Form -->
-<div class="form_div">
-<div class="title">
 
-</div>
+
+
+<div class="formpart">
+
+
 <form name="myForm" action="insertintouser.php" onsubmit="return validateForm()"  method="post">
 <!-- Method can be set as POST for hiding values in URL-->
 <h2>REGISTER</h2>
-<label>Name:</label>
-<input class="input" name="name" type="text" value="">
-<label>Email:</label>
-<input class="input" name="email" type="text"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" value="">
-<label>Password:</label>
-<input type="password" id="txtPassword" name="password" onkeyup="CheckPasswordStrength(this.value)" autocomplete="off" />
+
+<input class="form-control input-sm chat-input" id="txt" name="name" type="text" value="" placeholder="Name">
+
+<input class="form-control input-sm chat-input" id="txt" name="email" type="text"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" value="" placeholder="Email">
+
+<input class="form-control input-sm chat-input" type="password" id="txt" name="password" onkeyup="CheckPasswordStrength(this.value)" autocomplete="off" placeholder="Password">
 <span id="password_strength"></span>
+<input class="btn btn-warning" name="submit" type="submit" value="SUBMIT">
 <script type="text/javascript">
     function CheckPasswordStrength(password) {
         var password_strength = document.getElementById("password_strength");
@@ -86,11 +87,12 @@
 <!-- <input class="input" name="password" type="text" value=""> -->
 
 
-<input class="submit" name="submit" type="submit" value="SUBMIT">
+
 
 
 
 </form>
+</div>
 </div>
 </body>
 </html>

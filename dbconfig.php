@@ -1,4 +1,5 @@
 <?php
-    $connection = mysql_connect("localhost", "root", "9433");
+    include("dbcredentials.php");
+    $connection = mysql_connect($servername,$username,$password);
     $db = mysql_select_db("quizdb", $connection);
     ?>

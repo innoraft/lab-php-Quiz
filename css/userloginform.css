@@ -9,7 +9,7 @@ body {
   line-height: 30px;
   color: #777;
   background-color: lightgrey;
-   background: url(../images/wood2.jpg) no-repeat top;
+   background: url(../images/testbg.jpeg) no-repeat top;
   background-size: cover;
   -moz-background-size: cover;
   -webkit-background-size: cover;
@@ -29,39 +29,32 @@ text-align:center
 }
 .form_div {
 width:100%;
+box-shadow: 2px 2px 2px 2px black;
 
 }
-label{
-  font-size: 20px;
-  font-style: fantasy;
-}
+
 form {
-width:400px;
+width:333px;
 
 padding:10px 30px 40px;
 margin-left:70px;
-/*background-color:#FAF5F2;*/
-background-image: url("../images/wood.jpg");*/
-/*background-color: white;*/
-box-shadow: 2px 2px 2px ;
+
+background-image: url("../images/testbg.jpeg");
+
+box-shadow: 1px 1px 1px 1px grey;
 
 margin: 0 auto;
-margin-top: 5%;
+margin-top: 20%;
 font-family: sans-serif;
 }
+
 form h2 {
 text-align:center;
-text-shadow:2px 2px 2px #cfcfcf
+text-shadow:2px 2px 2px #cfcfcf;
+color:grey;
+font-style: fantasy;
 }
-textarea {
-width:100%;
-height:60px;
-border-radius:1px;
-box-shadow:0 0 1px 2px #123456;
-margin-top:10px;
-padding:7px;
-border:none
-}
+
 .input {
 width:100%;
 height:30px;
@@ -72,18 +65,11 @@ padding:7px;
 border:none;
 margin-bottom:20px
 }
-.submit {
-color:#fff;
-border-radius:3px;
-background:grey;
-padding:5px;
-margin-top:40px;
-border:none;
-width:100%;
-height:30px;
-box-shadow:0 0 2px 2px #123456;
-font-size:20px;
-font-style: fantasy;
+.btn-warning{
+margin-top: 2%;
+margin-left: 38%;
+background-color: skyblue;
+
 }
 p {
 color:red;
@@ -94,12 +80,8 @@ text-align:center;
 color:green
 border-radius:1px;
 }
-#txtPassword{
+#txt{
    width:100%;
 height:30px;
-border-radius:1px;
-box-shadow:0 0 1px 2px #123456;
-margin-top:10px;
-padding:7px;
-border:none
+
 }
