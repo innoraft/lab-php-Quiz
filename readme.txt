@@ -24,8 +24,16 @@
 Deployment steps:
 
 1.Clone this from the github repo git@github.com:innoraft/lab-php-Quiz.git. or download zip.
-2.Make changes in the dbcredentials.php file.
-3.Run the dbcreate.php file.
+2.Create the database with credentials needed.
+3.Make changes in dbconfig.php file.
+                                
+                                       <?php
+    $connection = mysql_connect("localhost", "root", "9433");
+    $db = mysql_select_db("quizdb", $connection);
+    ?>
+make changes as needed
+4.save the changes made in dbconfig.php file.
+5.import the database through quizdb.sql file.
 
 				
 
