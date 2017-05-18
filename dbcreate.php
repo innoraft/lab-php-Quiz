@@ -16,6 +16,21 @@ echo "DATABASE CREATED";
 else{
 	echo "error in creating db";
 }
+$create_table_admin=mysql_query("CREATE TABLE IF NOT EXISTS `admin` (
+  `admin_id` int(100) NOT NULL AUTO_INCREMENT,
+  `admin_name` varchar(100) NOT NULL,
+  `admin_email` varchar(100) NOT NULL,
+  `admin_passhash` varchar(100) NOT NULL,
+  `roll_id` int(100) NOT NULL,
+  PRIMARY KEY (`admin_id`)
+)");
+if($create_table_admin == TRUE)
+{
+	echo "admin table created";
+}
+else{
+	echo "error in creating the admin table";
+}
 $insert_into_admin=mysql_query("INSERT INTO `admin` (`admin_id`, `admin_name`, `admin_email`, `admin_passhash`, `roll_id`) VALUES
 (1, 'Saheb', 'soumyaraha10@yahoo.in', '900150983cd24fb0d6963f7d28e17f72', 1)");
 
@@ -32,7 +47,7 @@ $create_table_ans_given=mysql_query("CREATE TABLE IF NOT EXISTS `ans_given` (
   `e_id` int(100) NOT NULL,
   `q_id` int(100) NOT NULL,
   `ans_given` int(100) NOT NULL
-");
+)");
 if($create_table_ans_given==TRUE)
 {
 	echo "ansgiven table created";
@@ -45,8 +60,8 @@ else
 $create_table_categories=mysql_query("CREATE TABLE IF NOT EXISTS `categories` (
   `c_id` int(11) NOT NULL AUTO_INCREMENT,
   `c_name` varchar(20) DEFAULT NULL,
-  PRIMARY KEY (`c_id`)"
-);
+  PRIMARY KEY (`c_id`)
+)");
 if($create_table_categories==TRUE)
 {
 	echo "categories table created";
