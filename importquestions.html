@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IMPORT QUESTIONS</title>
+	<link href="css/youareregistered.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css"> 
+</head>
+<body>
+<div class="container">
+<div class="display">
+
+    <p>IMPORT QUESTIONS MANUALLY </p>
+    <input type="button" onclick="redirect_registered()"  class="btn btn-warning" value="Click to insert questions">
+    <p>Import csv file</p>
+    <form method="POST" action="insertquestions.php" enctype="multipart/form-data">
+    <P>Upload file:</P>
+    <input type="file" name="file" />
+    <input type="submit" class="btn btn-warning" value="Upload" />
+</form>
+ </div>
+ </div>
+
+ <script type="text/javascript">
+ 	function redirect_registered()
+{
+   
+   window.location="insertquestions.html";
+   
+
+   
+}
+ </script>
+
+
+</body>
+</html>

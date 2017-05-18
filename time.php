@@ -1,3 +1,3 @@
 <?php 
-header("location:http://quiz.com/registereduserlogin.html");
+print_r($_SERVER['DOCUMENT_ROOT']);
 ?>

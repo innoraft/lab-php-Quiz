@@ -6,12 +6,12 @@ $cate=$_POST['category'];
 $others="OTHERS";
 	if(strcasecmp($others,$cate)==0)
      {
-			 echo "others";
+			
 	     $cat=$_POST['yourTextBox'];
      }
 	else
 	   {
-			 echo "not others";
+			
 		   $cat=$_POST['category'];
 	   }
 
@@ -46,60 +46,5 @@ else{
 echo "<p>Insertion Failed <br/> Some Fields are Blank....!!</p>";
 }
 }
-//code to import csv file into quesans table
 
-
-
-
-
-
-
-//database connection details
-
-
-
-
-// path where your CSV file is located
-define('CSV_PATH','/var/www/quiz.com/public_html/');
-
-// Name of your CSV file
-$csv_file = CSV_PATH . "quesans.csv"; 
-
-
-if (($handle = fopen($csv_file, "r")) !== FALSE) {
-   fgetcsv($handle);   
-   while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
-        $num = count($data);
-        for ($c=0; $c < $num; $c++) {
-          $col[$c] = $data[$c];
-        }
-
- $col1 = $col[0];
- $col2 = $col[1];
- $col3 = $col[2];
- $col4 = $col[3];
- $col5 = $col[4];
- $col6 = $col[5];
- $col7 = $col[6];
-   
-// SQL Query to insert data into DataBase
-$query = "INSERT INTO quesans(q,opt1,opt2,opt3,opt4,ca,c_id) VALUES('".$col1."','".$col2."','".$col3."','".$col4."','".$col5."','".$col6."','".$col7."')";
-$s     = mysql_query($query, $conn);
- }
-    fclose($handle);
-}
-
-echo "File data successfully imported to database!!";
-
-
-
-
-
-
-
-
-
-mysql_close($conn);
-
-// Closing Connection with Server
 ?>
