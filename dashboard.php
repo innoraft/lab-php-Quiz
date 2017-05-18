@@ -38,7 +38,7 @@
     <ul class="nav navbar-nav">
       <li><a href="dashboard.php">Home</a></li>
       <li><a href="scoreboard.php">SCORE TABLE</a></li>
-      <li><a href="insertquestions.html">INSERT QUESTIONS</a></li>
+      <li><a href="importquestions.html">INSERT QUESTIONS</a></li>
       <li><a href="#">Page 3</a></li>
     </ul>
   </div>
