@@ -1,14 +1,22 @@
 <?php 
 
+include('dbconfig.php');
+
+
+$target_file = basename($_FILES["fileToUpload"]["name"]);
+$uploadOk = 1;
+
+
 
 //code to import csv file into quesans table
 
 //database connection details
 // path where your CSV file is located
-define('CSV_PATH',$_SERVER['DOCUMENT_ROOT']);
+define('CSV_PATH',$_SERVER['DOCUMENT_ROOT'].'/');
 
 // Name of your CSV file
-$csv_file = CSV_PATH . "quesans.csv"; 
+$csv_file = CSV_PATH . "$target_file"; 
+
 
 
 if (($handle = fopen($csv_file, "r")) !== FALSE) {
@@ -29,7 +37,7 @@ if (($handle = fopen($csv_file, "r")) !== FALSE) {
    
 // SQL Query to insert data into DataBase
 $query = "INSERT INTO quesans(q,opt1,opt2,opt3,opt4,ca,c_id) VALUES('".$col1."','".$col2."','".$col3."','".$col4."','".$col5."','".$col6."','".$col7."')";
-$s     = mysql_query($query, $conn);
+$s= mysql_query($query, $connection);
  }
     fclose($handle);
 }
@@ -44,7 +52,7 @@ echo "File data successfully imported to database!!";
 
 
 
-mysql_close($conn);
+
 
 // Closing Connection with Server
 ?>
