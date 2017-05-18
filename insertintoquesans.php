@@ -14,8 +14,17 @@ $others="OTHERS";
 			
 		   $cat=$_POST['category'];
 	   }
+$query=mysql_query("select c_name from categories where c_name='$cat'");
+$rowcat=mysql_fetch_assoc($query);
+if(empty($rowcat))
+{
 
   $catquery= mysql_query("insert into categories(c_name) values('".$cat."')");
+}
+
+else{
+
+}
 $sql=mysql_query("select c_id from categories where c_name='".$cat."'");
 // $rs=mysql_query($conn,$sql);
 // $row=mysql_fetch_assoc($rs);
