@@ -83,7 +83,7 @@ echo "your score is ".$score;
 
 echo "<br>";
  $ansgiven=sizeof($correct_answers);
- echo "total questions".$ansgiven;
+ 
  session_destroy();
  ?>
 </div>
