@@ -12,10 +12,11 @@
     <p>IMPORT QUESTIONS MANUALLY </p>
     <input type="button" onclick="redirect_registered()"  class="btn btn-warning" value="Click to insert questions">
     <p>Import csv file</p>
-    <form method="POST" action="insertquestions.php" enctype="multipart/form-data">
-    <P>Upload file:</P>
-    <input type="file" name="file" />
-    <input type="submit" class="btn btn-warning" value="Upload" />
+    <form action="insertquestions.php" method="post" enctype="multipart/form-data">
+    Select csv  to upload:
+    <input type="file" name="fileToUpload" id="fileToUpload">
+    <input type="submit" value="Upload Image" name="submit">
+</form>
 </form>
  </div>
  </div>
