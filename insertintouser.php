@@ -15,7 +15,7 @@ $get_mail= $get_value['u_email'];
           if(strcasecmp($get_mail,$email)==0)
           {
             echo"you already have one account";
-            // header('location:userlogin.html?msg=successful');
+            
             break;
           }
           else {
@@ -37,5 +37,5 @@ else{
 echo "<p>Insertion Failed <br/> Some Fields are Blank....!!</p>";
 }
 }
-mysql_close($connection); // Closing Connection with Server
+ // Closing Connection with Server
 ?>
