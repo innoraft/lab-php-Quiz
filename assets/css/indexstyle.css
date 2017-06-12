@@ -109,6 +109,7 @@ h1 span {
     text-transform:uppercase;
     color:#fff;
 	line-height: 55px;
+    font-family: georgia;
 }
 
 .navbar-default .navbar-nav>li>a:hover {
@@ -120,7 +121,17 @@ h1 span {
     background-color: transparent;
     border-top: 3px solid #4bcaff;
 }
-    
+.navbar-brand img{
+     height: 72px;
+     width:40px;
+}
+.navbar-header{
+    font-size: 60px;
+    color: white;
+    font-family: georgia;
+
+}
+
 
 /*For Home Section*/
 
@@ -148,6 +159,9 @@ h1 span {
 }
 .home-content p{
 	margin:30px 0;
+
+    font-size: 15px;
+    font-family: italic;
 	
 }
 .available{
@@ -155,7 +169,7 @@ h1 span {
 }
 .available p{
 	font-size:18px;
-	font-family: 'latolight';
+	font-family: 'latoitalic';
 	font-weight:normal;
 }
 .home-content .available p a i {

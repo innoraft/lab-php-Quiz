@@ -52,6 +52,7 @@
 <input class="form-control input-sm chat-input" type="password" id="txt" name="password" onkeyup="CheckPasswordStrength(this.value)" autocomplete="off" placeholder="Password">
 <span id="password_strength"></span>
 <input class="btn btn-warning" name="submit" type="submit" value="SUBMIT">
+<?php $reasons = array( "blank" => "You have left one or more fields blank."); if ($_GET["registerFailed"]) echo $reasons[$_GET["reason"]]; ?>
 <script type="text/javascript">
     function CheckPasswordStrength(password) {
         var password_strength = document.getElementById("password_strength");

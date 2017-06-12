@@ -34,6 +34,8 @@
                         <li><a href="dashboard.php">Dashboard</a></li>
                         <li><a href="https://www.onlinegk.com/">Books</a></li>
                         <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="logout.php">Logout</a></li>
+
 
                     </ul>
                 </div>
@@ -100,30 +102,37 @@
          ?>
         
          <div class="container">
-         <div class="panel panel-default" id="quespanel">
-         <div class="question">
-         <h1><?php  echo"$question";?></h1>
-         </div>
-         </div>
-         </div>
-         
-          <div class="container">
-          <div class="align-center ">
-          
-          <div class="panel panel-default" id="optionpanel">
-          
-            <div class="displayques" id="displayquestion">
-            
-            <form action="submitanswer.php" method="post">
+      
+          <div class="list-group list-cust">
+            <a class="list-group-item active">
+                <?php  echo"$question";?>
+            </a>
+            <form action="submitanswer.php" method="post" ">
             <p><input type="radio"  name="corrans" value="1"><?php echo $option1 ?></p> 
-		        <P><input type="radio" name="corrans" value="2"> <?php echo $option2 ?></P>
-		        <p><input type="radio"  name="corrans" value="3"><?php echo $option3 ?></p>       
+            <P><input type="radio"  name="corrans" value="2"><?php echo $option2 ?></P>
+            <p><input type="radio"  name="corrans" value="3"><?php echo $option3 ?></p>       
             <p><input type="radio"  name="corrans" value="4"><?php echo $option4 ?></p>
-             
+                 
             </div>
             </div>
+      
+         
+        <!--  <h1><?php  //echo"$question";?></h1>
+         
+            <form action="submitanswer.php" method="post" id="quespanel">
+            <p><input type="radio"  name="corrans" value="1"> <?php //echo $option1 ?></p> 
+		        <P><input type="radio" name="corrans" value="2">  <?php //echo $option2 ?></P>
+		        <p><input type="radio"  name="corrans" value="3"> <?php //echo $option3 ?></p>       
+            <p><input type="radio"  name="corrans" value="4"> <?php //echo $option4 ?></p>
+            </form>
             </div>
-            </div>
+            </div> -->
+           
+            
+            
+            
+          
+            
 
            
 
@@ -133,27 +142,30 @@
              <?php if($_GET['q']== 0) 
               { ?>
                       
-                      <input type="submit" onclick="" value="submit_ans">
-                      <input type="button" onclick="redirect_next()" value="next">  
-                      <input type="button" onclick="redirect_score()" value="END TEST" >
+                      <input class="btn btn-warning" name="submit" type="submit" onclick="" value="SUBMIT ANSWER">
+                      <input class="btn btn-warning"  type="button" onclick="redirect_next()" value="NEXT">  
+                      <input class="btn btn-warning"  type="button" onclick="redirect_score()" value="END TEST" >
 
                 <?php } 
                 
                 elseif ($_GET['q']== ($size-1)) {?>
-                      <input type="button" onclick="redirect_prev()" id="prevbtn"  value="prev ">
-                      <input type="submit" onclick="" value="submit_ans">
+                      <input class="btn btn-warning" type="button" onclick="redirect_prev()" id="prevbtn"  value="prev ">
                      
-                      <input type="button" onclick="redirect_score()" value="END TEST" >
+                      <input class="btn btn-warning"  name="submit" type="submit" onclick="" value="SUBMIT ANSWER">
+                      <input  class="btn btn-warning"  type="button" onclick="redirect_score()" value="END TEST" >
                <?php }
                   else 
                   {
                     ?>
-                      <input type="button" onclick="redirect_prev()" id="prevbtn"  value="prev ">
-                      <input type="submit" onclick="" value="submit_ans">
-                      <input type="button" onclick="redirect_next()" value="next">
-                      <input type="button" onclick="redirect_score()" value="END TEST" >
+                      <input class="btn btn-warning"  type="button" onclick="redirect_prev()" id="prevbtn"  value="PREV">
+                      <input class="btn btn-warning" name="submit" type="submit" onclick="" value="SUBMIT ANSWER">
+                      <input class="btn btn-warning"  type="button" onclick="redirect_next()" value="NEXT">
+                      <input class="btn btn-warning"  type="button" onclick="redirect_score()" value="END TEST" >
                 </div>
+                </div>
+                </form>
                 
+
                 
                
                       
@@ -203,8 +215,8 @@
 
 }
 </script>
-<script type="text/javascript">
-var MAX_COUNTER = 1000;
+<!-- <script type="text/javascript">
+var MAX_COUNTER = 100000;
 var counter = null;
 var counter_interval = null;
 
@@ -288,8 +300,8 @@ init();
 </script>
   <div class="timer">TIME LEFT
   <div id="counter"></div>
-<!-- <a href="#" onclick="resetCounter(); return false">Reset counter</a></h1> -->
+
    </div>
-   </div>
+   </div> -->
 </body>
 </html>
