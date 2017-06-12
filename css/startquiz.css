@@ -1,14 +1,13 @@
 body {
   
   
-   background: url(../images/exam.jpg) no-repeat top;
+   background: url(../images/testbg.jpeg) no-repeat top;
   background-size: cover;
   -moz-background-size: cover;
   -webkit-background-size: cover;
   -o-background-size: cover;
   min-height:700px;
   width: 100%;
-  overflow: hidden; 
 }
 #btn{
 	width: 300px;
@@ -36,3 +35,127 @@ body {
   text-align: center;
   margin-top: 20%;
 }
+
+
+
+/*index */
+
+h1 span {
+    color: #f56363;
+    font-weight: 400;
+}
+
+
+.heading-content{
+  margin-bottom:60px;
+  color:#414042;
+}
+.heading-content h3{
+  font-weight: 700;
+  font-size:36px;
+}
+.heading-content h5{
+  font-family: 'latoregular';
+  font-weight: normal;
+  font-size:20px;
+}
+
+/*For Menu Style*/
+
+.navbar-default {
+    background-color: rgba(48, 48, 48, 0.42);
+    border-color:0;
+}
+
+.navbar {
+    min-height:90px;
+    margin-bottom:0;
+    border:0;
+    border-radius:0;
+}
+
+.navbar-default .navbar-nav>li>a {
+    font-size:14px;
+    text-transform:uppercase;
+    color:#fff;
+  line-height: 55px;
+    font-family: georgia;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+    color:#4bcaff;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+    color: #fff;
+    background-color: transparent;
+    border-top: 3px solid #4bcaff;
+}
+.navbar-brand img{
+     height: 72px;
+     width:40px;
+}
+.navbar-header{
+    font-size: 60px;
+    color: white;
+    font-family: georgia;
+
+}
+
+
+/*For Home Section*/
+
+.home{
+  background: url(../images/testbg.jpeg) no-repeat top;
+  background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  min-height:700px;
+  width: 100%;
+  overflow: hidden;
+}
+.home-content{
+  color:#fff;
+  margin-top:160px;
+}
+.home-content h1{
+  font-size:40px;
+  font-family: 'latolight';
+}
+.home-content h1 span{
+  font-family: 'latobold';
+  color:#fff;
+}
+.home-content p{
+  margin:30px 0;
+
+    font-size: 15px;
+    font-family: italic;
+  
+}
+.available{
+  margin-top:50px;
+}
+.available p{
+  font-size:18px;
+  font-family: 'latoitalic';
+  font-weight:normal;
+}
+.home-content .available p a i {
+    font-size: 25px;
+    background: #191c21;
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    text-align: center;
+    padding-top: 13px;
+    color: #4bcaff;
+    margin: 0 10px;
+  transition:.3s;
+}
+
+.home-content .available p a i:hover {
+   color: #fff;
+}
+

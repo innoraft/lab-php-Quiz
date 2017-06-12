@@ -1,19 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="css/startquiz.css" rel="stylesheet">
-<meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-  
+
+
+  <link href="css/startquiz.css" rel="stylesheet">
   <link rel="stylesheet" href="css/font-awesome.min.css">
-  <link rel="stylesheet" href="assets/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="WOW-master/css/libs/animate.css">
+  <link href="css/startquiz.css" rel="stylesheet">
   
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 <body>
+<nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">ONLINE QUIZ
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#"><img src="assets/images/examlogo1.png" alt="" /></a>
+                </div>
+
+                
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="leaderboard.php">Leaderboard</a></li>
+                        <li><a href="https://www.onlinegk.com/" target="_blank">Books</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
 
   <?php
 session_start();
@@ -24,13 +48,8 @@ session_start();
     <?php  if(isset($_SESSION['userid']))
     {
     ?>
-    <div class="container">
-    <div class="idprint">
-    <div class="panel panel-default">
-    <?php echo "user_id".$_SESSION['userid'];?></div>
-    <?php 
-     }
-    ?>
+    
+    
 <?php
 $cat=$_POST['c_name'];
 
@@ -40,12 +59,17 @@ $fetchcat_id= mysql_fetch_assoc($querycategory);
 $fetch_id=$fetchcat_id['c_id'];
 $_SESSION['category_id']=$fetch_id;
 $u_id=$_SESSION['userid'];
-echo $u_id;
+
 
 $querycheck=mysql_query("select c_id from exam_taken where u_id='$u_id'");
 $row=mysql_fetch_assoc($querycheck);
-
-
+}
+?>
+ <div class="container">
+    <div class="idprint">
+    
+    
+<?php 
 if($row['c_id']==$fetch_id)
 {
   echo "you have already given this exam .Go back and choose another category";
@@ -53,8 +77,8 @@ if($row['c_id']==$fetch_id)
 }
 else{
 ?>
-</div>
-</div>
+ </div>
+</div> 
 <?php 
 
 $queryques=mysql_query("select * from quesans where c_id='".$fetch_id."'");
@@ -72,12 +96,12 @@ while($row = mysql_fetch_assoc($queryques))
   
    //$dt=date('m/d/Y',$date);
    $name=$_SESSION['u_name'];
-   echo $name;
+  
    $c_id=$_SESSION['category_id'];
    $querycat=mysql_query("select c_name from categories where c_id='$c_id'");
    $cat_name=mysql_fetch_assoc($querycat);
    $u_id=$_SESSION['userid'];
-   echo $u_id;
+   
    
 
    $query=mysql_query(" insert into exam_taken(u_id,c_id,date,u_name,c_name) values('".$u_id."','".$fetch_id."','".$date."','".$name."','".$cat_name['c_name']."')"); 
@@ -85,7 +109,7 @@ while($row = mysql_fetch_assoc($queryques))
    $sql=mysql_query("select e_id from exam_taken where u_id='$u_id' and c_id='$fetch_id'"); 
    $e_id=mysql_fetch_assoc($sql);
    
-   echo $e_id['e_id'];
+   
    $SESSION['e_id']=$e_id['e_id'];
 
 ?>
