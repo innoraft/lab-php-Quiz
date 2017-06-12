@@ -39,7 +39,8 @@ $fetchcat_id= mysql_fetch_assoc($querycategory);
 
 $fetch_id=$fetchcat_id['c_id'];
 $_SESSION['category_id']=$fetch_id;
- $u_id=$_SESSION['userid'];
+$u_id=$_SESSION['userid'];
+echo $u_id;
 
 $querycheck=mysql_query("select c_id from exam_taken where u_id='$u_id'");
 $row=mysql_fetch_assoc($querycheck);
@@ -70,10 +71,13 @@ while($row = mysql_fetch_assoc($queryques))
 
   
    //$dt=date('m/d/Y',$date);
-   $name= $_SESSION['u_name'];
+   $name=$_SESSION['u_name'];
+   echo $name;
    $c_id=$_SESSION['category_id'];
    $querycat=mysql_query("select c_name from categories where c_id='$c_id'");
    $cat_name=mysql_fetch_assoc($querycat);
+   $u_id=$_SESSION['userid'];
+   echo $u_id;
    
 
    $query=mysql_query(" insert into exam_taken(u_id,c_id,date,u_name,c_name) values('".$u_id."','".$fetch_id."','".$date."','".$name."','".$cat_name['c_name']."')"); 

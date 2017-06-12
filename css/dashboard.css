@@ -4,7 +4,7 @@ body {
   font-size: 12px;
   line-height: 30px;
   
-   background: url(../images/exam.jpg) no-repeat top;
+   background: url(../images/testbg.jpeg) no-repeat top;
   background-size: cover;
   -moz-background-size: cover;
   -webkit-background-size: cover;
@@ -18,4 +18,84 @@ body {
 	font-size: 15px;
 	/*overflow: scroll;*/
 		
+}
+.dashboardbutttons{
+  margin-top: 10%;
+}
+
+
+/*css of index*/
+
+h1 span {
+    color: #f56363;
+    font-weight: 400;
+}
+
+
+.heading-content{
+  margin-bottom:60px;
+  color:#414042;
+}
+.heading-content h3{
+  font-weight: 700;
+  font-size:36px;
+}
+.heading-content h5{
+  font-family: 'latoregular';
+  font-weight: normal;
+  font-size:20px;
+}
+
+/*For Menu Style*/
+
+.navbar-default {
+    background-color: rgba(48, 48, 48, 0.42);
+    border-color:0;
+}
+
+.navbar {
+    min-height:90px;
+    margin-bottom:0;
+    border:0;
+    border-radius:0;
+}
+
+.navbar-default .navbar-nav>li>a {
+    font-size:14px;
+    text-transform:uppercase;
+    color:#fff;
+  line-height: 55px;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+    color:#4bcaff;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+    color: #fff;
+    background-color: transparent;
+    border-top: 3px solid #4bcaff;
+}
+    
+
+.button{
+  
+  margin-left: 30%;
+  padding-bottom: 40px;
+
+
+}
+.btn {
+  color: black;
+  width: 250px;
+  height: 200px;
+
+
+}
+.head{
+  margin-top: 10%;
+  margin-left: 35%;
+  font-size: 80px;
+  font-family: fantasy;
+  color: white;
 }

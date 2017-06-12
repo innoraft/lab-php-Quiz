@@ -83,7 +83,8 @@ echo "your score is ".$score;
 
 echo "<br>";
  $ansgiven=sizeof($correct_answers);
- 
+ unset($_SESSION['userid']);
+  unset($_SESSION['u_id']);
  session_destroy();
  ?>
 </div>

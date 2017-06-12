@@ -1,8 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-</head>
-<body>
+
  <?php session_start() ?>
   <?php
       include('dbconfig.php');

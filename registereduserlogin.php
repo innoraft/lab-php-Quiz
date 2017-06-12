@@ -1,27 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>ASK REGISTER</title>
-	<link href="css/askregister.css" rel="stylesheet">
-	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="WOW-master/css/libs/animate.css">
+<title>LOGIN</title>
+<link href="css/userloginform.css" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="WOW-master/css/libs/animate.css">
+
+
 </head>
 <body>
-      <script type="text/javascript" src="WOW-master/dist/wow.min.js"></script>
+
+
+
+
+
+
+<script type="text/javascript" src="WOW-master/dist/wow.min.js"></script>
 
       <script type="text/javascript">
 
-	wow = new WOW(
-	{
-	boxClass:'wow',
-	animateClass:'animated',
-	offset:100
-	}
-	);
-	wow.init();
-	</script>
-	 
-        <nav class="navbar navbar-default navbar-fixed-top">
+    wow = new WOW(
+    {
+    boxClass:'wow',
+    animateClass:'animated',
+    offset:100
+    }
+    );
+    wow.init();
+    </script>
+    <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
@@ -47,40 +54,36 @@
                 </div>
             </div>
         </nav>
-
-      <div class="container ">
-      <div class="align-center ">
-      <div class="buttons wow bounceInLeft	">
-     
-      <input type="button" onclick="redirect_registered()"  id="btn1" value="If you are a registered user click here">
+<div class="container">
 
 
+<!--HTML Form -->
 
 
-      <input type="button" onclick="redirect_userlogin()"  id="btn2" value="Register here">
-      </div>
-      
-      </div>
-      </div>
-      <script>
+<div class="formpart">
+<form name="myForm" action="checklogin.php"   method="post">
+<!-- Method can be set as POST for hiding values in URL-->
+<h2>LOGIN</h2>
 
- function redirect_registered()
-{
-   
-   window.location=" registereduserlogin.html";
-   
 
-   
-}
-</script>
-<script>
- function redirect_userlogin()
-{
 
-   
-      window.location="userlogin.html";
+<input class="form-control input-sm chat-input" name="email" type="text"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" value="" placeholder="Email">
 
-}
-</script>
+<input type="password"  class="form-control input-sm chat-input" name="password" autocomplete="off" placeholder="Password" >
+ <?php $reasons = array("password" => "Wrong  Password", "blank" => "You have left one or more fields blank."); if ($_GET["loginFailed"]) echo $reasons[$_GET["reason"]]; ?>
+ 
+<input  class="btn btn-warning" name="submit" type="submit" value="SUBMIT">
+
+<!-- <input class="input" name="password" type="text" value=""> -->
+
+
+
+
+</form>
+
+</div>
+
+</div>
+
 </body>
 </html>

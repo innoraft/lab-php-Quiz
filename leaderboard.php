@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Dashboard</title>
+  <title>Leaderboard</title>
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="WOW-master/css/libs/animate.css">
   <link href="css/scoreboard.css" rel="stylesheet">
@@ -30,19 +30,8 @@
 </head>
 <body>
 
-<nav class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">DASHBOARD</a>
-    </div>
-    <ul class="nav navbar-nav">
-      <li><a href="dashboard.php">Home</a></li>
-      <li><a href="scoreboard.php">SCORE TABLE</a></li>
-      <li><a href="#">Page 2</a></li>
-      <li><a href="#">Page 3</a></li>
-    </ul>
-  </div>
-</nav>
+
+
   
 <!-- <div class="container" style="margin-top:50px">
   <h3>Fixed Navbar</h3>
@@ -71,7 +60,7 @@
 
 
 
-$sql=mysql_query("select * from exam_taken");
+$sql=mysql_query("select u_name,score from exam_taken  order by score DESC ");
 ?>
 <div class="container">
 
@@ -83,7 +72,7 @@ $sql=mysql_query("select * from exam_taken");
 
                       <section class="panel">
                           <header class="panel-heading">
-                              Basic Table
+                             LEADERBOARD
                           </header>
                           <table class="table">
 
@@ -93,13 +82,11 @@ $sql=mysql_query("select * from exam_taken");
                               <tr>
                                   
                                   
-                                  <th>EXAM_ID</th>
-                                  <th>EXAMINAER_ID</th>
+                                 
                                   <th>EXAMINER_NAME</th>
-                                  <th>CATEGORY_ID</th>
-                                  <th>CATEGORY_NAME</th>
+                                  
                                   <th>SCORE</th>
-                                  <th>DATE</th>
+                                  
                               </tr>
                               </thead>
                               <tbody>
@@ -108,13 +95,11 @@ $sql=mysql_query("select * from exam_taken");
                                   while($row=mysql_fetch_assoc($sql))
                                   {
                                    ?>
-                                  <td><?php echo $row['e_id'] ?></td>
-                                  <td><?php echo $row['u_id'] ?></td>
+                                  
                                   <td><?php echo $row['u_name'] ?></td>
-                                  <td><?php echo $row['c_id'] ?></td>
-                                  <td><?php echo $row['c_name'] ?></td>
+                                  
                                   <td><?php echo $row['score'] ?></td>
-                                  <td><?php echo $row['date'] ?></td>
+                                  
                               </tr>
                               <?php } ?>
                               
