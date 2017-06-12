@@ -2,8 +2,7 @@
 <?php
 		include('dbconfig.php');
 		?>
-<?php echo $_SESSION['userid'];
-echo $_SESSION['u_name']; ?>
+
 
 <?php
      //choosing the categories

@@ -3,12 +3,7 @@
 
 /* The Above Line Is To Import Google Font Style */
 body {
-  font-family: "Roboto", Helvetica, Arial, sans-serif;
-  font-weight: 100;
-  font-size: 12px;
-  line-height: 30px;
-  color: #777;
-  background-color: lightgrey;
+  
    background: url(../images/testbg.jpeg) no-repeat top;
   background-size: cover;
   -moz-background-size: cover;
@@ -16,7 +11,7 @@ body {
   -o-background-size: cover;
   min-height:700px;
   width: 100%;
-  overflow: hidden; 
+  
   
 }
 
@@ -39,7 +34,7 @@ width:333px;
 padding:10px 30px 40px;
 margin-left:70px;
 
-background-image: url("../images/testbg.jpeg");
+background-color: white;
 
 box-shadow: 1px 1px 1px 1px grey;
 
@@ -68,7 +63,7 @@ margin-bottom:20px
 .btn-warning{
 margin-top: 2%;
 margin-left: 38%;
-background-color: skyblue;
+
 
 }
 p {
@@ -130,6 +125,7 @@ h1 span {
     text-transform:uppercase;
     color:#fff;
   line-height: 55px;
+    font-family: georgia;
 }
 
 .navbar-default .navbar-nav>li>a:hover {
@@ -141,19 +137,29 @@ h1 span {
     background-color: transparent;
     border-top: 3px solid #4bcaff;
 }
-    
+.navbar-brand img{
+     height: 72px;
+     width:40px;
+}
+.navbar-header{
+    font-size: 60px;
+    color: white;
+    font-family: georgia;
+
+}
+
 
 /*For Home Section*/
 
 .home{
-  background: url(../images/testbg.jpeg) no-repeat top;
+  background: url(../images/testbg.jpeg) no-repeat top;*/
   background-size: cover;
   -moz-background-size: cover;
   -webkit-background-size: cover;
   -o-background-size: cover;
   min-height:700px;
   width: 100%;
-  
+  overflow: hidden;
 }
 .home-content{
   color:#fff;
@@ -169,6 +175,9 @@ h1 span {
 }
 .home-content p{
   margin:30px 0;
+
+    font-size: 15px;
+    font-family: italic;
   
 }
 .available{
@@ -176,7 +185,7 @@ h1 span {
 }
 .available p{
   font-size:18px;
-  font-family: 'latolight';
+  font-family: 'latoitalic';
   font-weight:normal;
 }
 .home-content .available p a i {
