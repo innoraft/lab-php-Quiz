@@ -11,10 +11,48 @@ body {
  
   
 }
+
 .table{
 	font-size: 15px;
-	/*overflow: scroll;*/
+	
+
+  
 		
+}
+
+.button{
+  width: 200px;
+  height: 50px;
+  background-color: white;
+  font-size: 24px;
+  color: black;
+  cursor: pointer;
+  font-family: georgia;
+  
+
+}
+.categorypart h1{
+  color: black;
+  font-style: bold;
+  font-size: 70px;
+  font-family: georgia;
+}
+ 
+
+input[type="submit"]{
+  color: black;
+  background-color: brown;
+  width: 200px;
+  height: 50px;
+  font-size: 24px;
+  cursor: pointer;
+  font-family: georgia;
+}
+.categorypart{
+  margin-top:10%;
+  text-align: center;
+  font-size: 40px;
+  padding-bottom: 10%;
 }
 
 
@@ -94,7 +132,7 @@ h1 span {
   -o-background-size: cover;
   min-height:700px;
   width: 100%;
-  overflow: hidden;
+  
 }
 .home-content{
   color:#fff;

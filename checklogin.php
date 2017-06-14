@@ -49,12 +49,12 @@ if(isset($_POST['submit']))
                                     $_SESSION['userid']=$get_id;
                                     if($userrole['u_role']=='admin')
                                     {
-                                      $_SESSION['login']=1;
+                                      $_SESSION['loggedin']=true;
                                       $_SESSION['rollid']=$id['roll_id'];
                                       header("Location:dashboard.php");
                                     }
                                     else{
-                                      $_SESSION['login']=1;
+                                      $_SESSION['loggedin']=true;
                                       $_SESSION['rollid']=$id['roll_id'];
                                       header("Location:quiztest.php");
                                     }
