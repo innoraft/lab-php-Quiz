@@ -157,7 +157,7 @@ else
 	echo "error in creation of user";
 }
 $insert_into_user=mysql_query("INSERT INTO `user` (`u_id`, `u_name`, `u_email`, `u_passhash`, `roll_id`) VALUES
-(1, 'Saheb', 'soumyaraha10@yahoo.in', '900150983cd24fb0d6963f7d28e17f72', 1)");
+(1, 'Soumya Raha', 'soumya.raha@innoraft.com', '900150983cd24fb0d6963f7d28e17f72', 1)");
 if($insert_into_user==TRUE)
 {
   echo "inserted into user ";
