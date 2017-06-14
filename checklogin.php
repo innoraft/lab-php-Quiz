@@ -78,14 +78,14 @@ if(isset($_POST['submit']))
              }
             
              else{
-                   echo "YOU DON'T HAVE AN ACCOUNT";
+                    die(header("location:registereduserlogin.php?loginFailed=true&reason=noaccount"));
                  }
 }
 }
 else
 {
 
-  echo "YOU DON'T HAVE AN ACCOUNT ";
+   die(header("location:registereduserlogin.php?loginFailed=true&reason=noaccount"));
 
 }
 ?>

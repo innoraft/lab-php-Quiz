@@ -77,11 +77,11 @@ else{?>
 <input class="form-control input-sm chat-input" name="email" type="text"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" value="" placeholder="Email">
 
 <input type="password"  class="form-control input-sm chat-input" name="password" autocomplete="off" placeholder="Password" >
- <?php $reasons = array("password" => "Wrong  Password", "blank" => "You have left one or more fields blank."); if ($_GET["loginFailed"]) echo $reasons[$_GET["reason"]]; ?>
+ <?php $reasons = array("password" => "Wrong  Password","noaccount"  => "YOU DON'T HAVE AN ACCOUNT", "blank" => "You have left one or more fields blank."); if ($_GET["loginFailed"]) echo $reasons[$_GET["reason"]]; ?>
  
 <input  class="btn btn-warning" name="submit" type="submit" value="SUBMIT">
 
-<!-- <input class="input" name="password" type="text" value=""> -->
+
 
 
 
