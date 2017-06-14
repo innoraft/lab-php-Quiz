@@ -16,32 +16,7 @@ echo "DATABASE CREATED";
 else{
 	echo "error in creating db";
 }
-$create_table_admin=mysql_query("CREATE TABLE IF NOT EXISTS `admin` (
-  `admin_id` int(100) NOT NULL AUTO_INCREMENT,
-  `admin_name` varchar(100) NOT NULL,
-  `admin_email` varchar(100) NOT NULL,
-  `admin_passhash` varchar(100) NOT NULL,
-  `roll_id` int(100) NOT NULL,
-  PRIMARY KEY (`admin_id`)
-)");
-if($create_table_admin == TRUE)
-{
-	echo "admin table created";
-}
-else{
-	echo "error in creating the admin table";
-}
-$insert_into_admin=mysql_query("INSERT INTO `admin` (`admin_id`, `admin_name`, `admin_email`, `admin_passhash`, `roll_id`) VALUES
-(1, 'Saheb', 'soumyaraha10@yahoo.in', '900150983cd24fb0d6963f7d28e17f72', 1)");
 
-if($insert_into_admin==TRUE)
-{
-	echo "inserted in admin";
-}
-else
-{
-	echo "error in inserting into admin";
-}
 
 $create_table_ans_given=mysql_query("CREATE TABLE IF NOT EXISTS `ans_given` (
   `e_id` int(100) NOT NULL,
@@ -181,5 +156,17 @@ else
 {
 	echo "error in creation of user";
 }
+$insert_into_user=mysql_query("INSERT INTO `user` (`u_id`, `u_name`, `u_email`, `u_passhash`, `roll_id`) VALUES
+(1, 'Saheb', 'soumyaraha10@yahoo.in', '900150983cd24fb0d6963f7d28e17f72', 1)");
+if($insert_into_user==TRUE)
+{
+  echo "inserted into user ";
+
+}
+else
+{
+  echo "failed inserting into user";
+}
+
 
 ?>

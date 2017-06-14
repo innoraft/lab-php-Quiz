@@ -11,8 +11,14 @@
 </head>
 <body>
 
+<?php 
+session_start();
 
-
+if($_SESSION['loggedin']==true)
+{
+    header("Location:quiztest.php");
+}
+else{?>
 
 
 
@@ -85,6 +91,7 @@
 </div>
 
 </div>
-
+<?php }
+?>
 </body>
 </html>

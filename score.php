@@ -1,10 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:fb="http://ogp.me/ns/fb#" class="no-js">
 <head>
 	<title></title>
 	<link href="classs/score.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link href="css/score.css" rel="stylesheet">
+  <!-- <meta property="og:title" content="MY SCORE IS <?php ; ?>!"/>
+
+<meta property="og:image" content="../images/examlogo1.png"/>
+
+<meta property="og:site_name" content="ONLINE QUIZ"/>
+
+<meta property="og:description" content=" How much do you think you can score? Try it for free!"/>  -->
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="WELCOME TO ONLINE QUIZ MY SCORE IS <?php echo $_SESSION['score']; ?>" />
+<meta property="og:description" content="How much do you think you can score? Try it for free!" />
+<meta property="og:url" content="http://quiz.sites.innoraft.com" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image" content="http://quiz.sites.innoraft.com/images/examlogo1.png" />
+<meta property="og:site_name" content="ONLINE QUIZ" />
 </head>
 <body>
 
@@ -108,7 +124,7 @@ echo "YOUR SCORE IS  ".$score;
    
    $sql=mysql_query("update exam_taken set score ='".$score."' where u_id ='$u_id' and c_id='$c_id'");
 
-
+   $_SESSION['score']=$score;
 
 
 echo "<br>";
@@ -122,7 +138,14 @@ echo "<br>";
 </div>
 <div class="container">
 <div class=align-center>
-<input type="button" class="btn btn-warning" onclick="redirect_next()" value="PLAY AGAIN" id="btn"></div></div>
+<input type="button" class="btn btn-warning" onclick="redirect_next()" value="PLAY AGAIN" id="btn">
+<a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fquiz.sites.innoraft.com%2F&amp;src=sdkpreparse"><button class="btn btn-primary btn-lg" id="btn">SHARE ON FACEBOOK</button></a>
+</div>
+</div>
+
+
+<!-- <div class="fb-share-button" data-href="http://quiz.sites.innoraft.com" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fquiz.sites.innoraft.com%2F&amp;src=sdkpreparse">Share</a></div>
+ -->
 <script>
  function redirect_next()
 {

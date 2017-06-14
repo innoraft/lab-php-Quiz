@@ -4,36 +4,14 @@
   <title>Leaderboard</title>
 
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-  <link href="css/scoreboard.css" rel="stylesheet">
+  <link href="css/filter.css" rel="stylesheet">
   <!-- <link rel="stylesheet" type="text/css" href="WOW-master/css/libs/animate.css"> -->
   
 </head>
 <body>
-<?php session_start(); ?>
-<?php
-    include('dbconfig.php');
-    ?>
 
-<?php
-     //choosing the categories
-    $sql=mysql_query("select c_name from categories");
-   ?>
-<div class="container">
-<div class ="categorypart">
-<h1>SELECT CATEGORY</h1>
-          <form action="filter.php" method="post">
-      
-        <select name="c_name" class="button">
-        <?php while ($row = mysql_fetch_array($sql)) { ?>
 
-        <option value="<?php echo $row['c_name'];?>"><?php echo $row['c_name']; ?></option>
-        <?php } ?>
-        </select>
-        <input class="submit" name="submit" type="submit" value="SUBMIT">
-        
-        </form>
-        </div>
-        </div>
+
 
 <nav class="navbar navbar-default navbar-fixed-top">
              <div class="container"> 
@@ -68,33 +46,12 @@
 ?>
     
 
+<?php
+   $cat=$_POST['c_name'];
+
+   ?>
 
 
-
-
-
-
-  
-<!-- <div class="container" style="margin-top:50px">
-  <h3>Fixed Navbar</h3>
-  <div class="row">
-    <div class="col-md-4">
-      <p>A fixed navigation bar stays visible in a fixed position (top or bottom) independent of the page scroll.</p>
-      <p>A fixed navigation bar stays visible in a fixed position (top or bottom) independent of the page scroll.</p>    
-    </div>
-    <div class="col-md-4"> 
-      <p>A fixed navigation bar stays visible in a fixed position (top or bottom) independent of the page scroll.</p>
-      <p>A fixed navigation bar stays visible in a fixed position (top or bottom) independent of the page scroll.</p>
-    </div>
-    <div class="col-md-4"> 
-      <p>A fixed navigation bar stays visible in a fixed position (top or bottom) independent of the page scroll.</p>
-      <p>A fixed navigation bar stays visible in a fixed position (top or bottom) independent of the page scroll.</p> 
-    </div>
-  </div>
-</div> -->
-
-<!-- <h1>Scroll this page to see the effect</h1>
- -->
 
 
 
@@ -102,7 +59,7 @@
 
 
 
-$sql=mysql_query("select u_name,score from exam_taken  order by score DESC ");
+$sql=mysql_query("select u_name,score from exam_taken  where c_name='$cat'  order by score DESC");
 ?>
 <div class="container">
 

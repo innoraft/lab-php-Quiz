@@ -6,7 +6,9 @@
 
 <?php
      //choosing the categories
-		$sql=mysql_query("select c_name from categories");?>
+		$sql=mysql_query("select c_name from categories");
+   ?>
+
 
 
 <!DOCTYPE html>
@@ -36,11 +38,11 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#home">Home</a></li>
+                        <li><a href="index.html">Home</a></li>
                         <li><a href="leaderboard.php">Leaderboard</a></li>
                         <li><a href="https://www.onlinegk.com/" target="_blank">Books</a></li>
                         <li><a href="#contact">Contact Us</a></li>
-
+                        <li><a href="logout.php">logout</a></li>
                     </ul>
                 </div>
             </div>
@@ -61,6 +63,9 @@
 				</form>
 				</div>
 				</div>
+
+
+
 </body>
 </html>
 
