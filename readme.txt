@@ -33,7 +33,7 @@ Deployment steps:
     ?>
 make changes as needed
 4.save the changes made in dbconfig.php file.
-5.import the database through quizdb.sql file.
+5.import the database through quizdb1.sql file.
 
 				
 
