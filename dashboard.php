@@ -11,7 +11,7 @@
 <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
+                <div class="navbar-header">ONLINE QUIZ
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
@@ -25,11 +25,10 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="dashboard.php">Dashboard</a></li>
-                        <li><a href="https://www.onlinegk.com/">Books</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="leaderboard.php">Leaderboard</a></li>
+                        <li><a href="https://www.onlinegk.com/" target="_blank">Books</a></li>
                         <li><a href="#contact">Contact Us</a></li>
-                        <li><a href="logout.php">logout</a></li>
 
                     </ul>
                 </div>
@@ -46,18 +45,6 @@
 
 
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-<body>
-
 
             <div class="container">
                  <div class="head">
@@ -71,10 +58,10 @@
 
                             
                             
-                            <p><a target="_blank" href=""><button class="btn btn-warning">GRAPHS</button></a>
+                            <p><a target="_blank" href="graph.php"><button class="btn btn-warning">GRAPHS</button></a>
                             <a target="_blank" href="leaderboard.php"><button class="btn btn-info">Leaderboard</button></a></p>
-                             <p><a target="_blank" href=""><button class="btn btn-danger">EXAM SCORES</button></a>
-                            <a target="_blank" href=""><button class="btn btn-warning ">REGISTER</button></a></p>
+                             <!-- <p><a target="_blank" href=""><button class="btn btn-danger">EXAM SCORES</button></a>
+                            <a target="_blank" href=""><button class="btn btn-warning ">REGISTER</button></a></p> -->
                             
 
                     
@@ -84,21 +71,6 @@
              
 
       
-
-
-<!-- <nav class="navbar navbar-inverse navbar-fixed-top" id="navbarcss">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="dashboard.php">DASHBOARD</a>
-    </div>
-    <ul class="nav navbar-nav">
-      <li><a href="dashboard.php">Home</a></li>
-      <li><a href="scoreboard.php">SCORE TABLE</a></li>
-      
-      <li><a href="leaderboard.php">Leaderboard</a></li>
-    </ul>
-  </div>
-</nav> -->
 
  
 </body>

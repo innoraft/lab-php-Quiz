@@ -14,7 +14,7 @@ if($create_database == TRUE)
 echo "DATABASE CREATED";
 }
 else{
-	echo "error in creating db";
+  echo "error in creating db";
 }
 
 
@@ -25,11 +25,11 @@ $create_table_ans_given=mysql_query("CREATE TABLE IF NOT EXISTS `ans_given` (
 )");
 if($create_table_ans_given==TRUE)
 {
-	echo "ansgiven table created";
+  echo "ansgiven table created";
 }
 else
 {
-	echo "error in creating ans_given table";
+  echo "error in creating ans_given table";
 }
 
 $create_table_categories=mysql_query("CREATE TABLE IF NOT EXISTS `categories` (
@@ -39,11 +39,11 @@ $create_table_categories=mysql_query("CREATE TABLE IF NOT EXISTS `categories` (
 )");
 if($create_table_categories==TRUE)
 {
-	echo "categories table created";
+  echo "categories table created";
 }
 else
 {
-	echo "error in creation of categories table";
+  echo "error in creation of categories table";
 
 }
 
@@ -60,10 +60,10 @@ $create_table_example=mysql_query("CREATE TABLE IF NOT EXISTS `example` (
 )");
 if($create_table_example==TRUE)
 {
-	echo "successfully created example";
+  echo "successfully created example";
 }
 else{
-	echo "error in creation of example table";
+  echo "error in creation of example table";
 
 }
 
@@ -83,11 +83,11 @@ $create_table_exam_taken=mysql_query("CREATE TABLE IF NOT EXISTS `exam_taken` (
 ) ");
 if($create_table_exam_taken==TRUE)
 {
-	echo "created table exam_taken";
+  echo "created table exam_taken";
 }
 else
 {
-	echo "error in creation of exam_taken table";
+  echo "error in creation of exam_taken table";
 }
 
 $create_table_quesans=mysql_query("CREATE TABLE IF NOT EXISTS `quesans` (
@@ -104,11 +104,11 @@ $create_table_quesans=mysql_query("CREATE TABLE IF NOT EXISTS `quesans` (
 ) ");
 if($create_table_quesans==TRUE)
 {
-	echo "created table quesans";
+  echo "created table quesans";
 }
 else
 {
-	echo "error in creation of quesans table";
+  echo "error in creation of quesans table";
 }
 
 $create_table_urole=mysql_query("CREATE TABLE IF NOT EXISTS `urole` (
@@ -118,11 +118,11 @@ $create_table_urole=mysql_query("CREATE TABLE IF NOT EXISTS `urole` (
 )");
 if($create_table_urole==TRUE)
 {
-	echo "created table urole";
+  echo "created table urole";
 }
 else
 {
-	echo "error in creation of urole";
+  echo "error in creation of urole";
 }
 
 $insert_into_urole=mysql_query("INSERT INTO `urole` (`u_role`, `roll_id`) VALUES
@@ -130,12 +130,12 @@ $insert_into_urole=mysql_query("INSERT INTO `urole` (`u_role`, `roll_id`) VALUES
 ('user', 2)");
 if($insert_into_urole==TRUE)
 {
-	echo "inserted into urole ";
+  echo "inserted into urole ";
 
 }
 else
 {
-	echo "failed inserting into urole";
+  echo "failed inserting into urole";
 }
 
 
@@ -150,11 +150,11 @@ $create_table_user=mysql_query("CREATE TABLE IF NOT EXISTS `user` (
 ) ");
 if($create_table_user==TRUE)
 {
-	echo "created table user";
+  echo "created table user";
 }
 else
 {
-	echo "error in creation of user";
+  echo "error in creation of user";
 }
 $insert_into_user=mysql_query("INSERT INTO `user` (`u_id`, `u_name`, `u_email`, `u_passhash`, `roll_id`) VALUES
 (1, 'Soumya Raha', 'soumya.raha@innoraft.com', '900150983cd24fb0d6963f7d28e17f72', 1)");
