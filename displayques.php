@@ -116,18 +116,7 @@
             </div>
             </div>
       
-         
-        <!--  <h1><?php  //echo"$question";?></h1>
-         
-            <form action="submitanswer.php" method="post" id="quespanel">
-            <p><input type="radio"  name="corrans" value="1"> <?php //echo $option1 ?></p> 
-		        <P><input type="radio" name="corrans" value="2">  <?php //echo $option2 ?></P>
-		        <p><input type="radio"  name="corrans" value="3"> <?php //echo $option3 ?></p>       
-            <p><input type="radio"  name="corrans" value="4"> <?php //echo $option4 ?></p>
-            </form>
-            </div>
-            </div> -->
-           
+       
             
             
             
@@ -215,7 +204,7 @@
 
 }
 </script>
-<!-- <script type="text/javascript">
+ <script type="text/javascript">
 var MAX_COUNTER = 100000;
 var counter = null;
 var counter_interval = null;
@@ -302,6 +291,6 @@ init();
   <div id="counter"></div>
 
    </div>
-   </div> -->
+   </div> 
 </body>
 </html>
