@@ -3,7 +3,7 @@ session_start();
 include('dbconfig.php');
 if(isset($_POST['submit']))
 { 
-// Fetching variables of the form which travels in URL
+
 $name = $_POST['name'];
 
 $email = $_POST['email'];
@@ -31,7 +31,7 @@ $get_mail= $get_value['u_email'];
 
 
 if($name !=''||$email !=''){
-//Insert Query of SQL
+
 $query = mysql_query("insert into user(u_name, u_email,u_passhash,roll_id)  values ('$name','$email','$passhash','$roll')");
 
 $querytofetchdata=mysql_query("SELECT * FROM user WHERE u_email='".$email."'");

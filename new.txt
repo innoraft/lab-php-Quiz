@@ -2,26 +2,15 @@
 <html>
 <head>
   <title>Leaderboard</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-  <!-- <link rel="stylesheet" href="assets/css/bootstrap.min.css"> -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
-  <link href="css/scoreboard.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link href="css/filter.css" rel="stylesheet">
   <!-- <link rel="stylesheet" type="text/css" href="WOW-master/css/libs/animate.css"> -->
   
 </head>
 <body>
-<?php session_start(); ?>
-<?php
-    include('dbconfig.php');
-    ?>
 
-<?php
-     //choosing the categories
-    $sql=mysql_query("select c_name from categories");
-   ?>
+
 
 
 <nav class="navbar navbar-default navbar-fixed-top">
@@ -50,46 +39,17 @@
                 </div>
             </div> 
         </nav>
-         <div class="container">
-          <!-- Trigger the modal with a button -->
-  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" id="modalbtn">sort score</button>
-
-          <!-- modal -->
-        <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog modal-sm">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">choose category</h4>
-        </div>
-        <div class="modal-body">
-
-<?php
-     //choosing the categories
-    $sql=mysql_query("select c_name from categories");
-   ?>      
-           <form action="post">
-          <select name="c_name" class="cname">
-        <?php while ($row = mysql_fetch_array($sql)) { ?>
-
-        <option value="<?php echo $row['c_name'];?>"><?php echo $row['c_name']; ?></option>
-        <?php } ?>
-        </select>
-        </div>
-        <div class="modal-footer">
-          <input class="btn btn-warning" id="btn-content-submit" name="submit" type="submit" value="SUBMIT" data-dismiss="modal">
-          
-        </div>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
         
-
+<?php session_start(); ?>
+<?php
+    include('dbconfig.php');
+?>
     
 
+<?php
+   $cat=$_POST['c_name'];
 
+   ?>
 
 
 
@@ -99,19 +59,19 @@
 
 
 
-$sql=mysql_query("select u_name,score from exam_taken  order by score DESC ");
+$sql=mysql_query("select u_name,score from exam_taken  where c_name='$cat'  order by score DESC");
 ?>
 <div class="container">
 
 
-<table class="table" id="pagination_data">
+<table class="table">
 <div class="col-sm-6">
                      <thead>
                               <tr>
                                   
                                   
                                  
-                                  <th>EXAMINER NAME</th>
+                                  <th>EXAMINER_NAME</th>
                                   
                                   <th>SCORE</th>
                                   
@@ -156,34 +116,32 @@ $table.find('thead tr').children().each(function(i, v) {
                   </script>
 
                   
-<script>
-   $(document).ready(function(){
-    $('#btn-content-submit').click(function(e){
 
-         e.preventDefault(); //This prevents the default action of the button
-         // console.log("works");
-         var c_name = $('.cname').val();
-         
 
-         // console.log(c_name);
-         
-              $.ajax({
-                   url:"filter.php",
-                   type:"POST",
-                   data :{
-                        c_name : c_name, // The2nd c_name is the name of the input field nd the 1st c_name is the nme of the variable created above
-                        
-          }, // sending the value of counter and blogtag to the server
-                   success:function(data){
-                   $("#pagination_data").empty(); // Clearing the table contents so that the new fetched data from the filtering can be populated here.
-                   // console.log(data);
-                   $('#pagination_data').html(data);
-                   }
-              });
+  <!-- // echo "<table>
+  // <tr>
+  //   <td >  EXAM_ID </td>
+  //   <td >  EXAMINER_ID</td>
+  //   <td >  EXAMINER NAME </td>
+  //   <td >  CATEGORY_ID</td>
+  //   <td >  CATEGORY_NAME</td>
+  //   <td >  SCORE </td>
+  //   <td >  DATE</td>
+  // </tr>"; -->
 
-    });
-});
-</script>
+  
+  <!-- echo "<tr>";
+  echo "<td>".$row['e_id']."</td>";
+  echo "<td>".$row['u_id']."</td>";
+  echo "<td>".$row['u_name']."</td>";
+  echo "<td>".$row['c_id']."</td>";
+  echo "<td>".$row['c_name']."</td>";
+  echo "<td>".$row['score']."</td>";
+  echo "<td>".$row['date']."</td>";
+  echo "</tr>"; -->
+  <!-- }
+  echo"</table>";
+ ?> -->
  
  
 </body>

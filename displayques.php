@@ -116,22 +116,13 @@
             </div>
             </div>
       
-       
-            
-            
-            
-          
-            
-
-           
-
-            <div class="container">
+       <div class="container">
             
             <div class="submitbtn">
              <?php if($_GET['q']== 0) 
               { ?>
                       
-                      <input class="btn btn-warning" name="submit" type="submit" onclick="redirect_next()" value="SUBMIT ANSWER">
+                      <input class="btn btn-warning" name="submit" type="submit" onclick="" value="SUBMIT ANSWER">
                       <input class="btn btn-warning"  type="button" onclick="redirect_next()" value="NEXT">  
                       <input class="btn btn-warning"  type="button" onclick="redirect_score()" value="END TEST" >
 
@@ -140,14 +131,14 @@
                 elseif ($_GET['q']== ($size-1)) {?>
                       <input class="btn btn-warning" type="button" onclick="redirect_prev()" id="prevbtn"  value="prev ">
                      
-                      <input class="btn btn-warning"  name="submit" type="submit" onclick="redirect_next()" value="SUBMIT ANSWER">
+                      <input class="btn btn-warning"  name="submit" type="submit" onclick="" value="SUBMIT ANSWER">
                       <input  class="btn btn-warning"  type="button" onclick="redirect_score()" value="END TEST" >
                <?php }
                   else 
                   {
                     ?>
                       <input class="btn btn-warning"  type="button" onclick="redirect_prev()" id="prevbtn"  value="PREV">
-                      <input class="btn btn-warning" name="submit" type="submit" onclick="redirect_next()" value="SUBMIT ANSWER">
+                      <input class="btn btn-warning" name="submit" type="submit" onclick="" value="SUBMIT ANSWER">
                       <input class="btn btn-warning"  type="button" onclick="redirect_next()" value="NEXT">
                       <input class="btn btn-warning"  type="button" onclick="redirect_score()" value="END TEST" >
                 </div>
