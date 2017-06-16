@@ -41,6 +41,7 @@ $_SESSION['u_name']= $value['u_name'];
 $_SESSION['userid']= $value['u_id'];
 echo $_SESSION['u_name'];
 echo $_SESSION['userid'];
+$_SESSION['loggedin']=true;
 
 header("location:quiztest.php");
 

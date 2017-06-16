@@ -12,6 +12,13 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 <body>
+<?php
+session_start();
+ if($_SESSION['loggedin']==true)
+{
+    header("Location:quiztest.php");
+
+?>
 <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
@@ -123,6 +130,11 @@ while($row = mysql_fetch_assoc($queryques))
    window.location="displayques.php?q=<?php echo $q; ?>"
 }
 </script>
+<?php } 
+}
+else {
+  header("Location:index.html");
+  }?>
+
 </body>
 </html>
-<?php } ?>

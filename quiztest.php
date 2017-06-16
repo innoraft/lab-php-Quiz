@@ -1,6 +1,11 @@
 <?php session_start(); ?>
 <?php
 		include('dbconfig.php');
+        if($_SESSION['loggedin']==true)
+{
+    
+
+
 		?>
 
 
@@ -64,6 +69,10 @@
 				</div>
 				</div>
 
+<?php }
+else {
+    header("Location:index.html");
+    } ?>
 
 
 </body>
