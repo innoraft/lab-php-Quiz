@@ -16,7 +16,7 @@
 <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
+                <div class="navbar-header">ONLINE QUIZ
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
@@ -30,12 +30,10 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
                     <ul class="nav navbar-nav navbar-right">
-                        <li class="active"><a href="#home">Home</a></li>
-                        <li><a href="dashboard.php">Dashboard</a></li>
-                        <li><a href="https://www.onlinegk.com/">Books</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="leaderboard.php">Leaderboard</a></li>
+                        <li><a href="https://www.onlinegk.com/" target="_blank">Books</a></li>
                         <li><a href="#contact">Contact Us</a></li>
-                        <li><a href="logout.php">Logout</a></li>
-
 
                     </ul>
                 </div>
@@ -55,8 +53,7 @@
          
         <div class="container">
         <div class="session-section">
-        <?php echo "user_id".$_SESSION['userid'];?> -->
-
+        
       <?php } 
 
       if(isset($_SESSION['category_id']))
@@ -172,7 +169,8 @@
 <script>
  function redirect_next()
 {
-   <?php $q=$_GET['q'] ?>
+   <?php $q=$_GET['q'] ;
+   $_SESSION['valueq']=$q;?>
    window.location="displayques.php?q=<?php echo $q+1;?> "
    
 }
