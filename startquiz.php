@@ -31,7 +31,7 @@
 
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="leaderboard.php">Leaderboard</a></li>
+                        <li><a href="leaderboard.php" target="_blank">Leaderboard</a></li>
                         <li><a href="https://www.onlinegk.com/" target="_blank">Books</a></li>
                         <li><a href="#contact">Contact Us</a></li>
                          <li><a href="logout.php">Logout</a></li>

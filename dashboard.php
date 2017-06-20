@@ -60,17 +60,58 @@
                             
                             
                             <p><a target="_blank" href="graph.php"><button class="btn btn-warning">GRAPHS</button></a>
-                            <a target="_blank" href="leaderboard.php"><button class="btn btn-info">Leaderboard</button></a></p>
-                             <!-- <p><a target="_blank" href=""><button class="btn btn-danger">EXAM SCORES</button></a>
-                            <a target="_blank" href=""><button class="btn btn-warning ">REGISTER</button></a></p> -->
+                            <a target="_blank" href="importquestions.html"><button class="btn btn-info">INSERT QUESTIONS</button></a>
+                            <a target="_blank" href="usertable.php"><button class="btn btn-info">USER TABLE</button></a>
+                            <a target="_blank" href="examtaken.php"><button class="btn btn-warning ">EXAMS GIVEN</button></a></p>
                             
+<?php
+ $sql=mysql_query("select  u_email from user ");
+ while($row= mysql_fetch_assoc($sql))
+ {
+  $countusers[]=$row;
+ }
+ $count=sizeof($countusers);
 
+$query=mysql_query("select  e_id from exam_taken ");
+ while($row= mysql_fetch_assoc($query))
+ {
+  $counteid[]=$row;
+ }
+ $counteid=sizeof($counteid);
+
+
+ 
+ ?>
                     
 
                         </div>
                     </div>
-             
-
+            <div class="container">
+    <div class="row">
+        <div class="col-md-3 col-sm-6">
+            <div class="progress blue">
+                <span class="progress-left">
+                    <span class="progress-bar"></span>
+                </span>
+                <span class="progress-right">
+                    <span class="progress-bar"></span>
+                </span>
+                <div class="progress-value"><?php echo $count ?>%USERS</div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="progress yellow">
+                <span class="progress-left">
+                    <span class="progress-bar"></span>
+                </span>
+                <span class="progress-right">
+                    <span class="progress-bar"></span>
+                </span>
+                <div class="progress-value"><?php echo $counteid ?>%EXAMS GIVEN</div>
+            </div>
+        </div>
+    </div>
+</div>
       
 
  

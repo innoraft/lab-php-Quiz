@@ -55,10 +55,12 @@ else{
 
 <input class="form-control input-sm chat-input" id="txt" name="name" type="text" value="" placeholder="Name" required>
 
-<input class="form-control input-sm chat-input" id="txt" name="email" type="text"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" value="" placeholder="Email" required>
+<input class="form-control input-sm chat-input" id="txt" name="email" type="text"  pattern="[a-z0-9._%+-]+@[innoraft]+\.[a-z]{2,3}$" value="" placeholder="Email" required>
 
-<input class="form-control input-sm chat-input" type="password" id="txt" name="password" onkeyup="CheckPasswordStrength(this.value)" autocomplete="off" placeholder="Password" required>
+<input class="form-control input-sm chat-input" type="password" id="password" name="password" onkeyup="CheckPasswordStrength(this.value)" autocomplete="off" placeholder="Password" required>
 <span id="password_strength"></span>
+ <input class="form-control input-sm chat-input" type="password" placeholder="Confirm Password" onkeyup="check()" id="confirm_password" required>
+ <span id='message'></span>
 <input class="btn btn-warning" name="submit" type="submit" value="SUBMIT" >
 <?php $reasons = array( "blank" => "You have left one or more fields blank."); if ($_GET["registerFailed"]) echo $reasons[$_GET["reason"]]; ?>
 <script type="text/javascript">
@@ -118,7 +120,30 @@ else{
         password_strength.innerHTML = strength;
         password_strength.style.color = color;
     }
+    </script>
+    <!-- <script>
+$.validate({
+modules : 'security',});
+});
 </script>
+ -->
+<script>
+var check = function() {
+  if (document.getElementById('password').value ==
+    document.getElementById('confirm_password').value) {
+    document.getElementById('message').style.color = 'green';
+    document.getElementById('message').innerHTML = 'matching';
+  } else {
+    document.getElementById('message').style.color = 'red';
+    document.getElementById('message').innerHTML = 'not matching';
+  }
+}
+
+
+</script>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
 <!-- <input class="input" name="password" type="text" value=""> -->
 
 

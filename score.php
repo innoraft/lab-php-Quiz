@@ -28,6 +28,9 @@
 <?php session_start(); ?>
 <?php
    include('dbconfig.php');
+   if($_SESSION['loggedin']==true)
+    {
+
     ?>
 
 <?php
@@ -127,11 +130,6 @@ echo "YOUR SCORE IS  ".$score;
    $_SESSION['score']=$score;
 
 
-echo "<br>";
- $ansgiven=sizeof($correct_answers);
- unset($_SESSION['userid']);
-  unset($_SESSION['u_id']);
- session_destroy();
  ?>
 
 </div>
@@ -154,5 +152,16 @@ echo "<br>";
 }
 </script>
 
+
+
+<?php
+}
+else{
+  header("Location:index.html");  
+}
+
+
+
+ ?>
 </body>
 </html>

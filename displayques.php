@@ -56,13 +56,7 @@
         
       <?php } 
 
-      if(isset($_SESSION['category_id']))
-
-       { 
-
-     echo "category id".$_SESSION['category_id'];
-
-      } 
+      
 
       if(isset($_SESSION['quesno']))
 
