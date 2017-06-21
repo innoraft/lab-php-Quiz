@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Leaderboard</title>
+  <title>User Leaderboard</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="//cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
@@ -36,6 +37,7 @@
 <?php session_start(); ?>
 <?php
     include('dbconfig.php');
+    $userid=$_SESSION['userid'];
     if($_SESSION['loggedin']==true)
     {
 
@@ -61,6 +63,7 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
                     <ul class="nav navbar-nav navbar-right">
+                     <li><a href="userdashboard.php" target="_blank"><i class="fa fa-user"></i><?php echo $_SESSION['u_name'] ?></a></li>
                        <!--  <li><a href="index.html">Home</a></li> -->
                         
                         <li><a href="https://www.onlinegk.com/" target="_blank">Books</a></li>
@@ -75,7 +78,7 @@
 
     <div class="container">
     <div class="displayhead">
-    <p>EXAMS TAKEN</p>
+    <p>EXAMS GIVEN BY YOU</p>
     </div>
     </div>
 
@@ -88,7 +91,7 @@
 
 
 
-$sql=mysql_query("select u_name,c_name,score,date from exam_taken ");
+$sql=mysql_query("select c_name,score,date from exam_taken where u_id='$userid' ");
 ?>
 <div class="container">
 
@@ -100,7 +103,7 @@ $sql=mysql_query("select u_name,c_name,score,date from exam_taken ");
                                   
                                   
                                  
-                                  <th>EXAMINER</th>
+                                  
                                   
                                   <th>CATEGORY</th>
                                    <th>SCORE</th>
@@ -114,7 +117,7 @@ $sql=mysql_query("select u_name,c_name,score,date from exam_taken ");
                                   {
                                    ?>
                                   
-                                  <td><?php echo $row['u_name'] ?></td>
+                                  
                                   
                                   <td><?php echo $row['c_name'] ?></td>
                                   <td><?php echo $row['score'] ?></td>
@@ -162,11 +165,13 @@ $table.find('thead tr').children().each(function(i, v) {
 </script>
  
  <?php 
- }
- else
-  {
-    header("Location:index.html");  
-  }
-  ?>
+}
+else{
+  header("Location:index.html");  
+}
+
+
+
+ ?>
 </body>
 </html>

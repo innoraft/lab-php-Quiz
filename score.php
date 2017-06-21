@@ -4,6 +4,7 @@
 <head>
 	<title></title>
 	<link href="classs/score.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link href="css/score.css" rel="stylesheet">
   <!-- <meta property="og:title" content="MY SCORE IS <?php ; ?>!"/>
@@ -107,7 +108,8 @@ foreach ($arrayures as $key => $value) {
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="index.html">Home</a></li>
+                    <li><a href="" target="_blank"><i class="fa fa-user"></i><?php echo $_SESSION['u_name'] ?></a></li>
+                       <!--  <li><a href="index.html">Home</a></li> -->
                         <li><a href="leaderboard.php">Leaderboard</a></li>
                         <li><a href="https://www.onlinegk.com/" target="_blank">Books</a></li>
                         <li><a href="#contact">Contact Us</a></li>
@@ -138,6 +140,7 @@ echo "YOUR SCORE IS  ".$score;
 <div class=align-center>
 <input type="button" class="btn btn-warning" onclick="redirect_next()" value="PLAY AGAIN" id="btn">
 <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fquiz.sites.innoraft.com%2F&amp;src=sdkpreparse"><button class="btn btn-primary btn-lg" id="btn">SHARE ON FACEBOOK</button></a>
+<a href="https://twitter.com/intent/tweet?text=Hello%20world"><button class="btn btn-primary btn-lg" id="btn">SHARE ON TWITTER</button></a>
 </div>
 </div>
 

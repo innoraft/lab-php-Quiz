@@ -16,7 +16,8 @@
    if($_SESSION['loggedin']==true)
     {
 
-?>      
+?>   
+
 <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
@@ -57,7 +58,7 @@
 
             <div class="container">
                  <div class="head">
-                            DASHBOARD
+                           YOUR DASHBOARD
                  </div>
 
                 <div class="button">
@@ -68,58 +69,14 @@
                             
                             
                             <p><a target="_blank" href="graph.php"><button class="btn btn-warning">GRAPHS</button></a>
-                            <a target="_blank" href="importquestions.html"><button class="btn btn-info">INSERT QUESTIONS</button></a>
-                            <a target="_blank" href="usertable.php"><button class="btn btn-info">USER TABLE</button></a>
-                            <a target="_blank" href="examtaken.php"><button class="btn btn-warning ">EXAMS GIVEN</button></a></p>
-                            
-<?php
- $sql=mysql_query("select  u_email from user ");
- while($row= mysql_fetch_assoc($sql))
- {
-  $countusers[]=$row;
- }
- $count=sizeof($countusers);
+                            <a target="_blank" href="prevscore.php"><button class="btn btn-info">Your previous scores</button></a>
+                            <!-- <a target="_blank" href="usertable.php"><button class="btn btn-info">USER TABLE</button></a> -->
+                            <!-- <a target="_blank" href="examtaken.php"><button class="btn btn-warning ">EXAMS GIVEN</button></a> --></p>
 
-$query=mysql_query("select  e_id from exam_taken ");
- while($row= mysql_fetch_assoc($query))
- {
-  $counteid[]=$row;
- }
- $counteid=sizeof($counteid);
-
-
- 
- ?>
                     
 
                         </div>
                     </div>
-            <div class="container">
-    <div class="row">
-        <div class="col-md-3 col-sm-6">
-            <div class="progress blue">
-                <span class="progress-left">
-                    <span class="progress-bar"></span>
-                </span>
-                <span class="progress-right">
-                    <span class="progress-bar"></span>
-                </span>
-                <div class="progress-value"><span><?php echo $count ?></span><span id="textincircle">USERS</span></div>
-            </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-            <div class="progress yellow">
-                <span class="progress-left">
-                    <span class="progress-bar"></span>
-                </span>
-                <span class="progress-right">
-                    <span class="progress-bar"></span>
-                </span>
-                <div class="progress-value"><?php echo $counteid ?><span id="textincircle">EXAMS GIVEN</span></div>
-            </div>
-        </div>
-    </div>
-</div>
       
 <?php 
 }
@@ -130,6 +87,6 @@ else{
 
 
 ?>
- 
+
 </body>
 </html>
