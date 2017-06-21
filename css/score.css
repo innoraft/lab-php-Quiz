@@ -20,13 +20,14 @@ body {
   position: absolute;
 }
 .scorepart{
-  font-size: 40px;
-  font-family: georgia;
-  display: block;
-  color: black;
-  margin-top: 30%;
-  margin-left: 35%;
+  font-size: 60px;
+  font-family: fantasy;
+  
+  color: white;
+  margin-top: 10%;
+  margin-left: 32%;
   text-transform: uppercase;
+
 }
 #btn{
 height: 50px;

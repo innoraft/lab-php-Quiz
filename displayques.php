@@ -7,12 +7,18 @@
     <meta name="description" content="">
     <meta name="author" content="">
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="WOW-master/css/libs/animate.css">
   <link href="css/displayques.css" rel="stylesheet">
   
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 <body>
+<?php session_start(); ?>
+<?php
+    include('dbconfig.php');
+      
+     ?>
 <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
@@ -30,7 +36,8 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="index.html">Home</a></li>
+                    <li><a href="userdashboard.php" target="_blank"><i class="fa fa-user"></i><?php echo $_SESSION['u_name'] ?></a></li>
+                        <!-- <li><a href="index.html">Home</a></li> -->
                         <li><a href="leaderboard.php">Leaderboard</a></li>
                         <li><a href="https://www.onlinegk.com/" target="_blank">Books</a></li>
                         <li><a href="#contact">Contact Us</a></li>
@@ -39,12 +46,7 @@
                 </div>
             </div>
         </nav>
-        <?php
-            include('dbconfig.php');
-            ?>
-        <?php
-      session_start()
-      ?>
+        
 
 
       <?php if(isset($_SESSION['userid']))
@@ -56,13 +58,7 @@
         
       <?php } 
 
-      if(isset($_SESSION['category_id']))
-
-       { 
-
-     echo "category id".$_SESSION['category_id'];
-
-      } 
+      
 
       if(isset($_SESSION['quesno']))
 

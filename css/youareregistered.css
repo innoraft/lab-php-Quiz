@@ -30,10 +30,7 @@ body{
   
 }
 
-
-/*index css */
-
-
+/*css of index*/
 
 h1 span {
     color: #f56363;
@@ -85,7 +82,33 @@ h1 span {
     background-color: transparent;
     border-top: 3px solid #4bcaff;
 }
-    
+
+.navbar-brand img{
+     height: 72px;
+     width:40px;
+}
+.navbar-header{
+    font-size: 60px;
+    color: white;
+    font-family: georgia;
+
+} 
+
+.button{
+  
+  margin-left: 30%;
+  padding-bottom: 40px;
+
+
+}
+
+.head{
+  margin-top: 10%;
+  margin-left: 35%;
+  font-size: 80px;
+  font-family: fantasy;
+  color: chocolate;
+}
 
 /*For Home Section*/
 
@@ -97,7 +120,7 @@ h1 span {
   -o-background-size: cover;
   min-height:700px;
   width: 100%;
-  
+  overflow: hidden;
 }
 .home-content{
   color:#fff;
@@ -113,6 +136,9 @@ h1 span {
 }
 .home-content p{
   margin:30px 0;
+
+    font-size: 15px;
+    font-family: italic;
   
 }
 .available{
@@ -120,7 +146,7 @@ h1 span {
 }
 .available p{
   font-size:18px;
-  font-family: 'latolight';
+  font-family: 'latoitalic';
   font-weight:normal;
 }
 .home-content .available p a i {
@@ -139,3 +165,4 @@ h1 span {
 .home-content .available p a i:hover {
    color: #fff;
 }
+

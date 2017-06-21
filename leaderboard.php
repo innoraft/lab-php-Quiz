@@ -5,17 +5,41 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="//cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
+  <script src="//cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
 
   <!-- <link rel="stylesheet" href="assets/css/bootstrap.min.css"> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
   <link href="css/scoreboard.css" rel="stylesheet">
   <!-- <link rel="stylesheet" type="text/css" href="WOW-master/css/libs/animate.css"> -->
+  <link href="bootstrap-data-table-master/css/jquery.bdt.css" type="text/css" rel="stylesheet">
+    <link href="bootstrap-data-table-master/css/styletable.css" type="text/css" rel="stylesheet">
   
 </head>
+<style>
+  body {
+  
+  
+   background: url(../images/testbg.jpeg) no-repeat top;
+  background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  min-height:700px;
+  width: 100%;
+ 
+  
+}
+
+</style>
 <body>
 <?php session_start(); ?>
 <?php
     include('dbconfig.php');
+    if($_SESSION['loggedin']==true)
+    {
+
+
     ?>
 
 <?php
@@ -42,9 +66,10 @@
 
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="leaderboard.php">Leaderboard</a></li>
+                        
                         <li><a href="https://www.onlinegk.com/" target="_blank">Books</a></li>
                         <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="logout.php">logout</a></li>
 
                     </ul>
                 </div>
@@ -52,7 +77,7 @@
         </nav>
          <div class="container">
           <!-- Trigger the modal with a button -->
-  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" id="modalbtn">sort score</button>
+  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" id="modalbtn">SORT SCORES</button>
 
           <!-- modal -->
         <div class="modal fade" id="myModal" role="dialog">
@@ -105,13 +130,13 @@ $sql=mysql_query("select u_name,score from exam_taken  order by score DESC ");
 
 
 <table class="table" id="pagination_data">
-<div class="col-sm-6">
+<!-- <div class="col-sm-6"> -->
                      <thead>
                               <tr>
                                   
                                   
                                  
-                                  <th>EXAMINER NAME</th>
+                                  <th>TOP SCORERS</th>
                                   
                                   <th>SCORE</th>
                                   
@@ -135,7 +160,7 @@ $sql=mysql_query("select u_name,score from exam_taken  order by score DESC ");
                         
                      
 
-                  </div>
+                  <!-- </div> -->
                   </table>
                   
                   </div>
@@ -184,7 +209,29 @@ $table.find('thead tr').children().each(function(i, v) {
     });
 });
 </script>
+
+<script src="http://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
+<!-- <script src="js/bootstrap.min.js" type="text/javascript"></script> -->
+<script src="bootstrap-data-table-master/js/jquery.sortelements.js" type="text/javascript"></script>
+<script src="bootstrap-data-table-master/js/jquery.bdt.min.js" type="text/javascript"></script> 
+<script>
+    $(document).ready( function () {
+        $('#pagination_data').bdt({
+            showSearchForm: true,
+            showEntriesPerPageField: true
+        });
+    });
+</script>
  
  
+
+ <?php
+}
+else{
+  header("Location:index.html");  
+}
+
+
+  ?>
 </body>
 </html>

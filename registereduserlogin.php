@@ -74,7 +74,7 @@ else{?>
 
 
 
-<input class="form-control input-sm chat-input" name="email" type="text"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" value="" placeholder="Email" required>
+<input class="form-control input-sm chat-input" name="email" type="text"  pattern="[a-z0-9._%+-]+@[a-z]+\.[a-z]{2,3}$" value="" placeholder="Email" required>
 
 <input type="password"  class="form-control input-sm chat-input" name="password" autocomplete="off" placeholder="Password" required>
  <?php $reasons = array("password" => "Wrong  Password","noaccount"  => "YOU DON'T HAVE AN ACCOUNT", "blank" => "You have left one or more fields blank."); if ($_GET["loginFailed"]) echo $reasons[$_GET["reason"]]; ?>
